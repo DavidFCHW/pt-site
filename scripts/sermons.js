@@ -21,6 +21,28 @@ const jsonfs = require('jsonfile'),
 var sermons = [];
 var sermons_json = __dirname + "/../data/sermons.json";
 let sermons_path = __dirname + "/../assets/audio/";
+let counter = 0;
+dbx.filesListFolder({path: '/audio/'}).then(response => {
+    let entries = response.entries;
+    entries.forEach(entry => counter++);
+    console.log(counter);
+
+    entries.forEach(entry => {
+        let parts = entry.name.split("_");
+        let category = parts[0];
+        let date = parts[1];
+        let obj = {
+            'title': parts[4],
+            'speaker': parts[2],
+            'date': parts[1],
+            'scripture': parts[3]
+        };
+        sermons.push(obj);
+    });
+    console.log(sermons.length);
+    jsonfs.writeFileSync(sermons_json,sermons,{spaces:4});
+
+}).catch(error => console.log(error));
 
 
 

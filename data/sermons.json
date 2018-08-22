@@ -1,254 +1,595 @@
 [
     {
-        "title": "Unity of the Church",
+        "title": "Abiding in Him.mp3",
         "speaker": "John Sherwood",
-        "scripture": "Acts 2:37-47",
-        "date": "04/03/2011",
-        "date_pretty": "Fri 4th Mar 2011",
-        "category": "LDE",
-        "path": "assets/audio/LDE_03.04.2011_John Sherwood_Acts 2.37-47_Unity of the Church.mp3"
+        "date": "01.03.2009",
+        "scripture": "John 15"
     },
     {
-        "title": "Faith that Works",
+        "title": "Do This in Rememberance of Me.mp3",
+        "speaker": "John Sherwood",
+        "date": "01.11.2009",
+        "scripture": "Luke 22.19"
+    },
+    {
+        "title": "Are Softened or Hardened in Your Heart.mp3",
+        "speaker": "John Sherwood",
+        "date": "02.05.2010",
+        "scripture": "Isaiah 6.9-10"
+    },
+    {
+        "title": "Keeping the Feast.mp3",
+        "speaker": "John Sherwood",
+        "date": "02.08.2009",
+        "scripture": "1 Corinthians 5.1-8"
+    },
+    {
+        "title": "The Last Supper.mp3",
+        "speaker": "John Sherwood",
+        "date": "02.11.2008",
+        "scripture": "Luke 22.14-34"
+    },
+    {
+        "title": "God's Sovereignty on Judgement and Salvation.mp3",
+        "speaker": "John Sherwood",
+        "date": "03.04.2011",
+        "scripture": "Revelation 5-6"
+    },
+    {
+        "title": "All Will Be Well.mp3",
+        "speaker": "John Sherwood",
+        "date": "06.02.2011",
+        "scripture": "Mark 4.35-41"
+    },
+    {
+        "title": "Can These Dry Bones Live#.mp3",
         "speaker": "John Thao",
-        "scripture": "Hebrews 11:1-19",
-        "date": "03/06/2011",
-        "date_pretty": "Fri 3rd Jun 2011",
-        "category": "LDE",
-        "path": "assets/audio/LDE_06.03.2011_John Thao_Hebrews 11.1-19_Faith that Works.mp3"
+        "date": "06.03.2011",
+        "scripture": "Ezekiel 37.1-14"
     },
     {
-        "title": "It's High Time Awake Out of Sleep",
+        "title": "The Compassion of Christ.mp3",
+        "speaker": "John Sherwood",
+        "date": "07.02.2010",
+        "scripture": "Matthew 17.14-20"
+    },
+    {
+        "title": "Abounding Charity.mp3",
+        "speaker": "John Sherwood",
+        "date": "07.06.2009",
+        "scripture": "1 Peter 4.8"
+    },
+    {
+        "title": "Receiving the End of Your Faith.mp3",
+        "speaker": "John Sherwood",
+        "date": "09.08.2009",
+        "scripture": "Genesis 22.1-19"
+    },
+    {
+        "title": "Theocracy.mp3",
+        "speaker": "John Sherwood",
+        "date": "09.11.2008",
+        "scripture": "1 Timothy 6.13-16"
+    },
+    {
+        "title": "What it Means to Be a Christian.mp3",
+        "speaker": "Celal Berker",
+        "date": "10.01.2010",
+        "scripture": "John 6"
+    },
+    {
+        "title": "Predetermined Counsel of God.mp3",
+        "speaker": "John Sherwood",
+        "date": "13.03.2011",
+        "scripture": "Acts 4"
+    },
+    {
+        "title": "Jesus Leads the Way in Everything.mp3",
+        "speaker": "John Sherwood",
+        "date": "13.06.2010",
+        "scripture": "John 14.6"
+    },
+    {
+        "title": "Has God Said#.mp3",
+        "speaker": "John Sherwood",
+        "date": "14.06.2009",
+        "scripture": "Genesis 3.1"
+    },
+    {
+        "title": "Glory in God.mp3",
+        "speaker": "John Sherwood",
+        "date": "14.08.2011",
+        "scripture": "Jude 7"
+    },
+    {
+        "title": "Do You Hear God's Voice#.mp3",
+        "speaker": "John Sherwood",
+        "date": "14.11.2010",
+        "scripture": "1 Kings 19.12"
+    },
+    {
+        "title": "The Counsel of the LORD Shall Stand.mp3",
+        "speaker": "John Sherwood",
+        "date": "15.02.2009",
+        "scripture": "Isaiah 46.10"
+    },
+    {
+        "title": "The Church of God.mp3",
+        "speaker": "John Sherwood",
+        "date": "16.01.2011",
+        "scripture": "1 Peter 2.6"
+    },
+    {
+        "title": "Remember Me.mp3",
+        "speaker": "John Sherwood",
+        "date": "16.05.2010",
+        "scripture": "Psalm 25"
+    },
+    {
+        "title": "Adoption.mp3",
+        "speaker": "John Sherwood",
+        "date": "16.11.2008",
+        "scripture": "Ephesians 1.1-5"
+    },
+    {
+        "title": "There is Life for a Look at the Crucified One.mp3",
+        "speaker": "John Sherwood",
+        "date": "17.10.2010",
+        "scripture": "Luke 15"
+    },
+    {
+        "title": "Predestination.mp3",
+        "speaker": "John Sherwood",
+        "date": "18.01.2009",
+        "scripture": "Romans 8.22-9.16"
+    },
+    {
+        "title": "Pearl of Great Price.mp3",
+        "speaker": "John Sherwood",
+        "date": "19.10.2008",
+        "scripture": "Matthew 13.44-46"
+    },
+    {
+        "title": "The Fear for God.mp3",
+        "speaker": "John Sherwood",
+        "date": "21.06.2009",
+        "scripture": "Revelation 14.7"
+    },
+    {
+        "title": "Weapon of our Warfare (Part 2).mp3",
+        "speaker": "John Sherwood",
+        "date": "21.08.2011",
+        "scripture": "Jude 7"
+    },
+    {
+        "title": "Forgiveness.mp3",
+        "speaker": "John Sherwood",
+        "date": "21.12.2008",
+        "scripture": "Matthew 18.21"
+    },
+    {
+        "title": "Our Lord's Dedication and Service.mp3",
+        "speaker": "John Sherwood",
+        "date": "22.03.2009",
+        "scripture": "Luke 4.16-30"
+    },
+    {
+        "title": "Faith Before Reason and Fear.mp3",
+        "speaker": "G.Childress",
+        "date": "22.11.2009",
+        "scripture": "Luke 5.1-11"
+    },
+    {
+        "title": "Faith Versus Reason.mp3",
+        "speaker": "John Sherwood",
+        "date": "23.01.2011",
+        "scripture": "2 Kings 6.8-23"
+    },
+    {
+        "title": "The Bride and the Bridegroom.mp3",
+        "speaker": "John Sherwood",
+        "date": "23.05.2010",
+        "scripture": "Matthew 25.1-13"
+    },
+    {
+        "title": "What Do You Will#.mp3",
+        "speaker": "John Sherwood",
+        "date": "23.11.2008",
+        "scripture": "James 4.13-15"
+    },
+    {
+        "title": "Return You Children of Men.mp3",
+        "speaker": "John Sherwood",
+        "date": "24.01.2010",
+        "scripture": "Psalms 90.3"
+    },
+    {
+        "title": "The Person of Christ.mp3",
+        "speaker": "John Sherwood",
+        "date": "24.05.2009",
+        "scripture": "Hebrews 1"
+    },
+    {
+        "title": "Is There No Balm in Gilead#.mp3",
+        "speaker": "John Sherwood",
+        "date": "26.10.2008",
+        "scripture": "Jeremiah 8.22"
+    },
+    {
+        "title": "Responding to God's Will.mp3",
         "speaker": "Pe Kee",
-        "scripture": "Romans 13:11-14",
-        "date": "02/06/2011",
-        "date_pretty": "Thu 2nd Jun 2011",
-        "category": "LDE",
-        "path": "assets/audio/LDE_06.02.2011_Pe Kee_Romans 13.11-14_It's High Time Awake Out of Sleep.mp3"
+        "date": "27.02.2011",
+        "scripture": "James 4.13-17"
     },
     {
-        "title": "To What End Were You Born?",
+        "title": "The Battle is the LORD's.mp3",
         "speaker": "John Sherwood",
-        "scripture": "John 18:37",
-        "date": "01/09/2011",
-        "date_pretty": "Thu 1st Sep 2011",
-        "category": "LDE",
-        "path": "assets/audio/LDE_09.01.2011_John Sherwood_John 18.37_To What End Were You Born#.mp3"
+        "date": "27.03.2011",
+        "scripture": "2 Chronicles 20"
     },
     {
-        "title": "Living Relationship with the Living God",
-        "speaker": "Pee Kee",
-        "scripture": "Psalm 19",
-        "date": "01/02/2011",
-        "date_pretty": "Tue 1st Feb 2011",
-        "category": "LDE",
-        "path": "assets/audio/LDE_02.01.2011_Pee Kee_Psalm 19_Living Relationship with the Living God.mp3"
+        "speaker": "John Sherwood Jude 8",
+        "date": "28.08.2011",
+        "scripture": "Glory Belongs to God Not to Men.mp3"
     },
     {
-        "title": "Receiving Those Who Belong to Christ",
-        "speaker": "John Sherwood",
-        "scripture": "Matthew 10:14",
-        "date": "12/05/2010",
-        "date_pretty": "Wed 12th May 2010",
-        "category": "LDE",
-        "path": "assets/audio/LDE_05.12.2010_John Sherwood_Matthew 10.14_Receiving Those Who Belong to Christ.mp3"
-    },
-    {
-        "title": "You May Know that You Have Eternal Life",
-        "speaker": "John Sherwood",
-        "scripture": "1 John 5:13",
-        "date": "11/07/2010",
-        "date_pretty": "Sun 11th Jul 2010",
-        "category": "LDE",
-        "path": "assets/audio/LDE_07.11.2010_John Sherwood_1 John 5.13_You May Know that You Have Eternal Life.mp3"
-    },
-    {
-        "title": "Sanctified Christian",
-        "speaker": "John Sherwood",
-        "scripture": "1 Peter 4",
-        "date": "10/03/2010",
-        "date_pretty": "Wed 10th Mar 2010",
-        "category": "LDE",
-        "path": "assets/audio/LDE_03.10.2010_John Sherwood_1 Peter 4_Sanctified Christian.mp3"
-    },
-    {
-        "title": "Not Worthy",
-        "speaker": "John Sherwood",
-        "scripture": "Luke 7:1-16",
-        "date": "08/08/2010",
-        "date_pretty": "Sun 8th Aug 2010",
-        "category": "LDE",
-        "path": "assets/audio/LDE_08.08.2010_John Sherwood_Luke 7.1-16_Not Worthy.mp3"
-    },
-    {
-        "title": "Our Will and God's Will",
-        "speaker": "John Sherwood",
-        "scripture": "Job 42",
-        "date": "07/04/2010",
-        "date_pretty": "Wed 7th Apr 2010",
-        "category": "LDE",
-        "path": "assets/audio/LDE_04.07.2010_John Sherwood_Job 42_Our Will and God's Will.mp3"
-    },
-    {
-        "title": "True Fruitful Repentance",
-        "speaker": "John Sherwood",
-        "scripture": "Matthew 3",
-        "date": "06/06/2010",
-        "date_pretty": "Sun 6th Jun 2010",
-        "category": "LDE",
-        "path": "assets/audio/LDE_06.06.2010_John Sherwood_Matthew 3_True Fruitful Repentance.mp3"
-    },
-    {
-        "title": "Where Is Our Faith?",
-        "speaker": "John Sherwood",
-        "scripture": "Matthew 15:21-39",
-        "date": "05/02/2010",
-        "date_pretty": "Fri 5th Feb 2010",
-        "category": "LDE",
-        "path": "assets/audio/LDE_02.05.2010_John Sherwood_Matthew 15.21-39_Where Is Our Faith#.mp3"
-    },
-    {
-        "title": "Lifting Up Our Soul to God",
+        "title": "Faith and Sacrifice.mp3",
         "speaker": "E.Cevik",
-        "scripture": "Psalm 25",
-        "date": "03/07/2010",
-        "date_pretty": "Sat 3rd Jul 2010",
-        "category": "LDE",
-        "path": "assets/audio/LDE_07.03.2010_E.Cevik_Psalm 25_Lifting Up Our Soul to God.mp3"
+        "date": "28.12.2008",
+        "scripture": "Hebrews 11.1-10"
     },
     {
-        "title": "True Repentance",
+        "title": "Fellowship with Jesus.mp3",
         "speaker": "John Sherwood",
-        "scripture": "Luke 23:39-43",
-        "date": "02/07/2010",
-        "date_pretty": "Fri 2nd Jul 2010",
-        "category": "LDE",
-        "path": "assets/audio/LDE_07.02.2010_John Sherwood_Luke 23.39-43_True Repentance.mp3"
+        "date": "29.03.2009",
+        "scripture": "Hebrews 13"
     },
     {
-        "title": "Love that Works By Faith",
+        "title": "The Zeal of the LORD.mp3",
+        "speaker": "John Sherwood",
+        "date": "30.01.2011",
+        "scripture": "Isaiah 9.1-7"
+    },
+    {
+        "title": "Covenant Relationship.mp3",
+        "speaker": "John Sherwood",
+        "date": "30.05.2010",
+        "scripture": "Hebrews 8"
+    },
+    {
+        "title": "Gideon's Obedience.mp3",
+        "speaker": "John Sherwood",
+        "date": "31.07.2011",
+        "scripture": "Jude 6"
+    },
+    {
+        "title": "The Apostle and High Priest of our Profession.mp3",
+        "speaker": "John Sherwood",
+        "date": "26.07.2009",
+        "scripture": "Hebrews 3.1"
+    },
+    {
+        "title": "The Reality of the Death of Christ.mp3",
+        "speaker": "John Sherwood",
+        "date": "03.05.2009",
+        "scripture": "Philippians 2.5-11"
+    },
+    {
+        "title": "Being with Christ in Glory.mp3",
+        "speaker": "John Sherwood",
+        "date": "11.01.2009",
+        "scripture": "John 17.24"
+    },
+    {
+        "title": "Do You Believe on the Son of God#.mp3",
+        "speaker": "John Sherwood",
+        "date": "25.07.2010",
+        "scripture": "John 9"
+    },
+    {
+        "title": "Working for the Kingdom of God.mp3",
+        "speaker": "John Sherwood",
+        "date": "26.12.2010",
+        "scripture": "Matthew 13.47-50"
+    },
+    {
+        "title": "Where is Our Peace#.mp3",
+        "speaker": "John Sherwood",
+        "date": "05.12.2010",
+        "scripture": "Jeremiah 33.8"
+    },
+    {
+        "title": "Has God Said# (Part 1).mp3",
+        "speaker": "John Sherwood",
+        "date": "21.02.2010",
+        "scripture": "Genesis 3.1"
+    },
+    {
+        "title": "Has God said# (Part 2).mp3",
+        "speaker": "John Sherwood",
+        "date": "28.02.2010",
+        "scripture": "Genesis 3.1"
+    },
+    {
+        "title": "Living Sacrifice Unto God.mp3",
+        "speaker": "John Sherwood",
+        "date": "20.02.2011",
+        "scripture": "Romans 12"
+    },
+    {
+        "title": "Keeping Faithful.mp3",
+        "speaker": "John Sherwood",
+        "date": "27.06.2010",
+        "scripture": "Daniel 1.8"
+    },
+    {
+        "title": "The All Seeing & Knowing God.mp3",
+        "speaker": "John Sherwood",
+        "date": "19.12.2010",
+        "scripture": "Genesis 28"
+    },
+    {
+        "title": "Communion with Christ.mp3",
+        "speaker": "John Sherwood",
+        "date": "12.10.2008",
+        "scripture": "Luke 24.13-31"
+    },
+    {
+        "title": "Until He Comes Whose Right It Is.mp3",
+        "speaker": "John Sherwood",
+        "date": "30.11.2008",
+        "scripture": "Ezekiel 21.27"
+    },
+    {
+        "title": "Union with God.mp3",
+        "speaker": "John Sherwood",
+        "date": "04.01.2009",
+        "scripture": "John 17"
+    },
+    {
+        "title": "Has God said# (Part 3).mp3",
+        "speaker": "John Sherwood",
+        "date": "07.03.2010",
+        "scripture": "Genesis 3.1"
+    },
+    {
+        "title": "That Great Prophet.mp3",
+        "speaker": "John Sherwood",
+        "date": "19.07.2009",
+        "scripture": "Deuteronomy 18"
+    },
+    {
+        "title": "The LORD's Love and Care.mp3",
+        "speaker": "John Sherwood",
+        "date": "31.01.2010",
+        "scripture": "Isaiah 63.9"
+    },
+    {
+        "title": "Humiliation of Christ.mp3",
+        "speaker": "John Sherwood",
+        "date": "16.08.2009",
+        "scripture": "Hebrews 2.14"
+    },
+    {
+        "title": "The Leadership of our Lord Jesus Christ.mp3",
+        "speaker": "John Sherwood",
+        "date": "25.04.2010",
+        "scripture": "Isaiah 55.4"
+    },
+    {
+        "title": "Coming to the Lord in Repentance and Believing.mp3",
+        "speaker": "John Sherwood",
+        "date": "31.05.2009",
+        "scripture": "Matthew 15.1-31"
+    },
+    {
+        "title": "We Would See Jesus.mp3",
+        "speaker": "John Sherwood",
+        "date": "02.01.2011",
+        "scripture": "John 12.20-32"
+    },
+    {
+        "title": "Unknown.mp3",
+        "speaker": "John Sherwood",
+        "date": "24.10.2010",
+        "scripture": "Matthew 25.31-46"
+    },
+    {
+        "title": "You Will Not Worship Any Other God.mp3",
+        "speaker": "John Sherwood",
+        "date": "17.05.2009",
+        "scripture": "Numbers 33.50-56"
+    },
+    {
+        "title": "Who is Jesus#.mp3",
+        "speaker": "John Sherwood",
+        "date": "26.04.2009",
+        "scripture": "John 12.20-50"
+    },
+    {
+        "title": "The Sign Given Unto Us.mp3",
+        "speaker": "John Sherwood",
+        "date": "10.10.2010",
+        "scripture": "Matthew 12.38-45"
+    },
+    {
+        "title": "The Power of Gospel.mp3",
+        "speaker": "John Sherwood",
+        "date": "09.01.2011",
+        "scripture": "1 Peter 4.17-18"
+    },
+    {
+        "title": "The Need to Inquire of the Lord.mp3",
+        "speaker": "John Sherwood",
+        "date": "22.02.2009",
+        "scripture": "Joshua 9"
+    },
+    {
+        "title": "Ascension of Christ.mp3",
+        "speaker": "John Sherwood",
+        "date": "19.04.2009",
+        "scripture": "Acts 1.1-11"
+    },
+    {
+        "title": "Forgiving One Another As God Has Forgiven Us.mp3",
         "speaker": "E.Cevik",
-        "scripture": "John 21",
-        "date": "11/08/2009",
-        "date_pretty": "Tue 11th Aug 2009",
-        "category": "LDE",
-        "path": "assets/audio/LDE_08.11.2009_E.Cevik_John 21_Love that Works By Faith.mp3"
+        "date": "08.11.2009",
+        "scripture": "Ephesians 4.32"
     },
     {
-        "title": "Prayer for All Men",
+        "title": "The Unmoveable Kingdom.mp3",
         "speaker": "John Sherwood",
-        "scripture": "1 Timothy 2:1",
-        "date": "11/01/2009",
-        "date_pretty": "Sun 11th Jan 2009",
-        "category": "LDE",
-        "path": "assets/audio/LDE_01.11.2009_John Sherwood_1 Timothy 2.1_Prayer for All Men.mp3"
+        "date": "29.11.2009",
+        "scripture": "Hebrews 12.18"
     },
     {
-        "title": "Walking and Delighting in God",
+        "title": "Where is Our Security#.mp3",
         "speaker": "John Sherwood",
-        "scripture": "Psalm 119:41-48",
-        "date": "09/06/2009",
-        "date_pretty": "Tue 9th Jun 2009",
-        "category": "LDE",
-        "path": "assets/audio/LDE_06.09.2009_John Sherwood_Psalm 119.41-48_Walking and Delighting in God.mp3"
+        "date": "11.07.2010",
+        "scripture": "Haggai 2.9"
     },
     {
-        "title": "Finishing the Race",
+        "title": "Whatsoever a Man Sows That He Shall Also Reap.mp3",
         "speaker": "John Sherwood",
-        "scripture": "1 Corinthians 9:24",
-        "date": "08/02/2009",
-        "date_pretty": "Sun 8th Feb 2009",
-        "category": "LDE",
-        "path": "assets/audio/LDE_02.08.2009_John Sherwood_1 Corinthians 9.24_Finishing the Race.mp3"
+        "date": "08.03.2009",
+        "scripture": "Galatians 6.1-7"
     },
     {
-        "title": "Church at Antioch",
+        "title": "Plea in the face of God's anger.mp3",
         "speaker": "John Sherwood",
-        "scripture": "Acts 11:19-30",
-        "date": "06/07/2009",
-        "date_pretty": "Mon 6th Jul 2009",
-        "category": "LDE",
-        "path": "assets/audio/LDE_07.06.2009_John Sherwood_Acts 11.19-30_Church at Antioch.mp3"
+        "date": "20.06.2010",
+        "scripture": "Psalm 85.6"
     },
     {
-        "title": "God's Judgement on the Wicked and the Christian's Witness",
+        "title": "Priesthood of Jesus Christ.mp3",
         "speaker": "John Sherwood",
-        "scripture": "Genesis 11 & 19",
-        "date": "05/03/2009",
-        "date_pretty": "Thu 5th Mar 2009",
-        "category": "LDE",
-        "path": "assets/audio/LDE_03.05.2009_John Sherwood_Genesis 11 & 19_God's Judgement on the Wicked and the Christian's Witness.mp3"
+        "date": "08.02.2009",
+        "scripture": "Hebrews 6.13-8.5"
     },
     {
-        "title": "A Psalm of Assent",
+        "title": "Thou art the Man.mp3",
         "speaker": "John Sherwood",
-        "scripture": "Psalm 119:25-32",
-        "date": "03/08/2009",
-        "date_pretty": "Mon 3rd Aug 2009",
-        "category": "LDE",
-        "path": "assets/audio/LDE_08.03.2009_John Sherwood_Psalm 119.25-32_A Psalm of Assent.mp3"
+        "date": "06.09.2009",
+        "scripture": "2 Samuel 12.7"
     },
     {
-        "title": "Greater Depth of Understanding God's Word",
+        "title": "Vessel in Master's Hand.mp3",
         "speaker": "John Sherwood",
-        "scripture": "Psalm 119:17-24",
-        "date": "03/01/2009",
-        "date_pretty": "Sat 3rd Jan 2009",
-        "category": "LDE",
-        "path": "assets/audio/LDE_01.03.2009_John Sherwood_Psalm 119.17-24_Greater Depth of Understanding God's Word.mp3"
+        "date": "18.07.2010",
+        "scripture": "Acts 9.1-16"
     },
     {
-        "title": "Compassion of Christ",
+        "title": "Assurance.mp3",
         "speaker": "John Sherwood",
-        "scripture": "Luke 8:41-48",
-        "date": "02/08/2009",
-        "date_pretty": "Sun 2nd Aug 2009",
-        "category": "LDE",
-        "path": "assets/audio/LDE_08.02.2009_John Sherwood_Luke 8.41-48_Compassion of Christ.mp3"
+        "date": "14.09.2008",
+        "scripture": "1 John 2.1-11"
     },
     {
-        "title": "What Shall I Render unto the LORD?",
+        "title": "Union with Christ.mp3",
         "speaker": "John Sherwood",
-        "scripture": "Psalm 116:12-13",
-        "date": "02/01/2009",
-        "date_pretty": "Fri 2nd Jan 2009",
-        "category": "LDE",
-        "path": "assets/audio/LDE_01.02.2009_John Sherwood_Psalm 116.12-13_What Shall I Render unto the LORD#.mp3"
+        "date": "28.06.2009",
+        "scripture": "Romans 8.35"
     },
     {
-        "title": "Union with One Another",
+        "title": "Church's Foundation.mp3",
         "speaker": "John Sherwood",
-        "scripture": "John 17:21-23",
-        "date": "01/04/2009",
-        "date_pretty": "Wed 1st Apr 2009",
-        "category": "LDE",
-        "path": "assets/audio/LDE_04.01.2009_John Sherwood_John 17.21-23_Union with One Another.mp3"
+        "date": "20.03.2011",
+        "scripture": "Matthew 16"
     },
     {
-        "title": "The Church of God (Part 7)",
+        "title": "Making Disciples of All Nations.mp3",
         "speaker": "John Sherwood",
-        "scripture": "John 8",
-        "date": "12/07/2008",
-        "date_pretty": "Sat 12th Jul 2008",
-        "category": "LDE",
-        "path": "assets/audio/LDE_07.12.2008_John Sherwood_John 8_The Church of God (Part 7).mp3"
+        "date": "25.10.2009",
+        "scripture": "Matthew 28.19-20"
     },
     {
-        "title": "The Church of God (Part 3)",
+        "title": "Character of Self and of Christ.mp3",
         "speaker": "John Sherwood",
-        "scripture": "Acts 2:37-47",
-        "date": "11/02/2008",
-        "date_pretty": "Mon 11th Feb 2008",
-        "category": "LDE",
-        "path": "assets/audio/LDE_02.11.2008_John Sherwood_Acts 2.37-47_The Church of God (Part 3).mp3"
+        "date": "09.05.2010",
+        "scripture": "2 Samuel 11"
     },
     {
-        "title": "Devil's Devices cont.",
+        "title": "Giving Glory to God.mp3",
         "speaker": "John Sherwood",
-        "scripture": "1 Peter 5",
-        "date": "10/05/2008",
-        "date_pretty": "Sat 10th May 2008",
-        "category": "LDE",
-        "path": "assets/audio/LDE_05.10.2008_John Sherwood_1 Peter 5_Devil's Devices cont..mp3"
+        "date": "14.02.2010",
+        "scripture": "Revelation 14.6-7"
+    },
+    {
+        "title": "We Have To Do With Jesus.mp3",
+        "speaker": "John Sherwood",
+        "date": "12.12.2010",
+        "scripture": "Matthew 8.29"
+    },
+    {
+        "title": "A True and a False Professor of Faith.mp3",
+        "speaker": "John Sherwood",
+        "date": "15.03.2009",
+        "scripture": "1 Timothy 6.11"
+    },
+    {
+        "title": "Trusting in God's strength.mp3",
+        "speaker": "John Sherwood",
+        "date": "21.11.2010",
+        "scripture": "Isaiah 50"
+    },
+    {
+        "title": "God's Choice.mp3",
+        "speaker": "John Sherwood",
+        "date": "01.08.2010",
+        "scripture": "1 Corinthians 1.27-31"
+    },
+    {
+        "title": "If My People Humble Themselves.mp3",
+        "speaker": "John Sherwood",
+        "date": "08.08.2010",
+        "scripture": "2 Chronicles 7.14"
+    },
+    {
+        "title": "God's Sovereignty.mp3",
+        "speaker": "E.Cevik",
+        "date": "23.08.2009",
+        "scripture": "Ephesians 2.8"
+    },
+    {
+        "title": "Watch Unto The Lord's Coming.mp3",
+        "speaker": "John Sherwood",
+        "date": "01.02.2009",
+        "scripture": "1 Thessalonians 4.16-18"
+    },
+    {
+        "title": "Glory of Christ' Kingdom.mp3",
+        "speaker": "John Sherwood",
+        "date": "17.01.2010",
+        "scripture": "1 Kings 3"
+    },
+    {
+        "title": "Security in the Truth.mp3",
+        "speaker": "E.Cevik",
+        "date": "31.10.2010",
+        "scripture": "2 Peter 1-2"
+    },
+    {
+        "title": "I and Father Are One.mp3",
+        "speaker": "John Sherwood",
+        "date": "05.10.2008",
+        "scripture": "John 10.11-30"
+    },
+    {
+        "title": "Claims of Christ's Authority on the Believer.mp3",
+        "speaker": "John Sherwood",
+        "date": "15.11.2009",
+        "scripture": "Ephesians 4.7-16"
+    },
+    {
+        "title": "The Good Samaritan.mp3",
+        "speaker": "John Sherwood",
+        "date": "30.08.2009",
+        "scripture": "Luke 10.25-37"
+    },
+    {
+        "title": "I and the Father Are One.mp3",
+        "speaker": "John Sherwood",
+        "date": "05.10.2008",
+        "scripture": "John 10.11-30"
     }
 ]
