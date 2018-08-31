@@ -25,6 +25,12 @@ var local_sermons_json = __dirname + "/../data/local-sermons.json";
 let sermons_path = __dirname + "/../assets/audio/";
 let counter = 0;
 
+function dateSort(a, b){
+    let dateA = new Date(a.date).getTime();
+    let dateB = new Date(b.date).getTime();
+    return dateA > dateB ? 1: -1;
+}
+
 //Getting latest sermons on dropbox.
 dbx.filesListFolder({path: '/audio/'}).then(response => {
     let entries = response.entries;
@@ -44,6 +50,7 @@ dbx.filesListFolder({path: '/audio/'}).then(response => {
         let obj = {
             'title': title.replace("#","?"),
             'speaker': parts[2],
+            'date_rev': date,
             'date': dateFormat(new Date(date), 'dd/mm/yyyy'),
             'date_pretty': dateFormat(new Date(date), 'ddd dS mmm yyyy'),
             'scripture': scripture,
@@ -68,7 +75,8 @@ dbx.filesListFolder({path: '/audio/'}).then(response => {
             return sermon;
         })
     });
-    sermons = _.sortBy(sermons, sermon => new Date(sermon.date).getTime());
+    sermons = _.sortBy(sermons, sermon => - (new Date(sermon.date_rev).getTime()));
+    //sermons.sort(dateSort);
     jsonfs.writeFileSync(sermons_json,sermons,{spaces:4});
 }).catch(error => console.log(error));
 
@@ -94,6 +102,7 @@ fs.readdir(sermons_path, 'utf8', function(err, files){
             'title': title.replace('#', '?'),
             'speaker': speaker,
             'scripture': scripture,
+            'date_rev': date,
             'date': dateFormat(new Date(date), 'dd/mm/yyyy'),
             'date_pretty': dateFormat(new Date(date), "ddd dS mmm yyyy"),
             'category': category,
@@ -102,7 +111,7 @@ fs.readdir(sermons_path, 'utf8', function(err, files){
 
         local_sermons.push(obj);
     });
-    local_sermons = _.sortBy(local_sermons, sermon => - new Date(sermon.date).getTime());
+    local_sermons = _.sortBy(local_sermons, sermon => - new Date(sermon.date_rev).getTime());
     //console.log(sermons.length);
     jsonfs.writeFileSync(local_sermons_json, local_sermons, {spaces: 4});
 });
