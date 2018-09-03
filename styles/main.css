@@ -6780,65 +6780,83 @@ a.text-dark:hover, a.text-dark:focus {
   .table .thead-dark th {
     color: inherit;
     border-color: #dee2e6; } }
-.def-header {
-  padding-top: 25px;
-  padding-bottom: 25px;
-  border-bottom: whitesmoke; }
-  .def-header .container {
-    padding: 0px;
-    margin-left: 104.5px;
-    margin-right: 104.5px; }
-    .def-header .container .logo {
+html {
+  min-height: 100%;
+  margin: 0;
+  position: relative; }
+  html body {
+    margin-bottom: 60px; }
+    html body .def-header {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      border-bottom: whitesmoke; }
+      html body .def-header .container {
+        padding: 0px;
+        margin-left: 104.5px;
+        margin-right: 104.5px; }
+        html body .def-header .container .logo {
+          padding-left: 15px; }
+          html body .def-header .container .logo .site-title {
+            color: black; }
+            html body .def-header .container .logo .site-title:hover {
+              text-decoration: none;
+              color: black; }
+        html body .def-header .container .links .menu {
+          padding-left: 0px;
+          float: right;
+          margin-bottom: 8px;
+          margin-top: 6px; }
+          html body .def-header .container .links .menu li {
+            display: inline;
+            padding: 7.5px; }
+            html body .def-header .container .links .menu li:hover {
+              border-bottom: 2px solid black; }
+            html body .def-header .container .links .menu li a {
+              color: black; }
+              html body .def-header .container .links .menu li a:hover {
+                color: black;
+                text-decoration: none; }
+    html body .homepage .main-img {
+      padding: 0px;
+      overflow-x: hidden; }
+    html body .homepage .container .home-about {
+      padding: 20px 15px; }
+    html body .homepage .container a {
+      background-color: white;
+      border: 2px solid black;
+      color: black;
+      padding: 10px;
+      transition: 0.3s;
+      margin: 5px; }
+      html body .homepage .container a:hover {
+        color: white;
+        text-decoration: none;
+        background-color: black; }
+    html body .homepage #find-us {
+      margin-left: 104.5px;
       padding-left: 15px; }
-      .def-header .container .logo .site-title {
-        color: black; }
-        .def-header .container .logo .site-title:hover {
-          text-decoration: none;
-          color: black; }
-    .def-header .container .links .menu {
-      padding-left: 0px;
-      float: right;
-      margin-bottom: 8px;
-      margin-top: 6px; }
-      .def-header .container .links .menu li {
-        display: inline;
-        padding: 7.5px; }
-        .def-header .container .links .menu li:hover {
-          border-bottom: 2px solid black; }
-        .def-header .container .links .menu li a {
-          color: black; }
-          .def-header .container .links .menu li a:hover {
-            color: black;
-            text-decoration: none; }
-
-.homepage .main-img {
-  padding: 0px;
-  overflow-x: hidden; }
-.homepage .container .home-about {
-  padding: 20px 15px; }
-.homepage .container a {
-  background-color: white;
-  border: 2px solid black;
-  color: black;
-  padding: 10px;
-  transition: 0.3s;
-  margin: 5px; }
-  .homepage .container a:hover {
-    color: white;
-    text-decoration: none;
-    background-color: black; }
-.homepage #find-us {
-  margin-left: 104.5px;
-  padding-left: 15px; }
-
-footer {
-  background-color: white;
-  border-top: 1px solid #DCDCDC;
-  margin-top: 15px; }
-  footer .container {
-    padding: 15px; }
-    footer .container p {
-      float: right;
-      padding: 5px; }
+    html body .footer {
+      /*background-color: white;
+      border-top: 1px solid #DCDCDC;
+      height: 100px;
+      margin-top: 15px;
+      position: relative;
+      left: 0;
+      bottom: 0;
+      width: 100%;*/
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 60px;
+      /* Set the fixed height of the footer here */
+      line-height: 60px;
+      /* Vertically center the text there */
+      background-color: #f5f5f5; }
+      html body .footer .container {
+        padding: 0; }
+        html body .footer .container p {
+          float: right;
+          padding: 0;
+          margin-bottom: 0; }
 
 /*# sourceMappingURL=main.css.map */
