@@ -16,6 +16,8 @@ html{
                     padding-left: 15px;
                     .site-title {
                         color: black;
+                        font-family: "Times New Roman";
+                        font-weight: bold;
                         &:hover {
                             text-decoration: none;
                             color: black;
@@ -86,6 +88,15 @@ html{
             #find-us {
                 margin-left: 104.5px;
                 padding-left: 15px;
+            }
+
+            .sermon-intro {
+                p {
+                    text-align: center;
+                }
+            }
+            .search {
+                text-align: center;
             }
         }
 
