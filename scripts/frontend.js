@@ -17,5 +17,6 @@ $(document).ready(function(){
         });
     } else if(title === "Sermons"){
         console.log("This isn't the homepage");
+
     }
 });
