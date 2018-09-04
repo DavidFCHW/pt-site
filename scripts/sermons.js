@@ -1,14 +1,15 @@
 /*node*/
 /**For the sermons, store the current ones locally and generate them from there. And when there are new sermons, put them
 in Dropbox and generate the files from there.
- Also, I don't think that I will separate the morning sermons from the evening ones at the moment.
- So I may just put them in one list of sermons, paginate them (as previously desired). And in the jQuery script
- I may also add a filtering feature via drop downs and search menu etc.
+ Also, I don't think that I will separate the morning sermons from the evening ones, because not all the sermons were done
+ on a Sunday. So I may just put them in one list of sermons, paginate them (as previously desired). And in the jQuery script
+ I would add a filtering feature via drop downs and search menu etc.
  **/
 
 //node modules
 const jsonfs = require('jsonfile'),
       fs = require('fs'),
+    //fsPromises = require('fs').promises,
       dateFormat = require('dateformat'),
       _ = require('underscore'),
       Promise = require('promise'),
@@ -24,10 +25,16 @@ var local_sermons_json = __dirname + "/../data/local-sermons.json";
 let sermons_path = __dirname + "/../assets/audio/";
 let counter = 0;
 
+function dateSort(a, b){
+    let dateA = new Date(a.date).getTime();
+    let dateB = new Date(b.date).getTime();
+    return dateA > dateB ? 1: -1;
+}
 
 //Getting latest sermons on dropbox.
 dbx.filesListFolder({path: '/audio/'}).then(response => {
     let entries = response.entries;
+    //console.log(entries[0]);
     entries.forEach(entry => counter++);
     console.log(counter); //for consistency - ensuring that all the files are dealt with.
 
@@ -69,6 +76,7 @@ dbx.filesListFolder({path: '/audio/'}).then(response => {
         })
     });
     sermons = _.sortBy(sermons, sermon => - (new Date(sermon.date_rev).getTime()));
+    //sermons.sort(dateSort);
     jsonfs.writeFileSync(sermons_json,sermons,{spaces:4});
 }).catch(error => console.log(error));
 
@@ -76,8 +84,11 @@ dbx.filesListFolder({path: '/audio/'}).then(response => {
 //Getting sermons from local directories
 fs.readdir(sermons_path, 'utf8', function(err, files){
     let filtFiles = files.filter(file => file.endsWith('.mp3'));
+    //console.log(filtFiles);
+    //console.log(filtFiles.length);
     filtFiles.forEach(file => {
         let parts = file.split("_");
+        //console.log(parts);
         if(parts.length < 5){
             console.log(parts); // to see if there are any filenames not following the custom format
         }
@@ -100,7 +111,7 @@ fs.readdir(sermons_path, 'utf8', function(err, files){
 
         local_sermons.push(obj);
     });
-    local_sermons = _.sortBy(local_sermons, sermon => - (new Date(sermon.date_rev).getTime()));
+    local_sermons = _.sortBy(local_sermons, sermon => - new Date(sermon.date_rev).getTime());
     //console.log(sermons.length);
     jsonfs.writeFileSync(local_sermons_json, local_sermons, {spaces: 4});
 });
