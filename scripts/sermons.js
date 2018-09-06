@@ -1,15 +1,12 @@
 /*node*/
-/**For the sermons, store the current ones locally and generate them from there. And when there are new sermons, put them
-in Dropbox and generate the files from there.
- Also, I don't think that I will separate the morning sermons from the evening ones, because not all the sermons were done
- on a Sunday. So I may just put them in one list of sermons, paginate them (as previously desired). And in the jQuery script
- I would add a filtering feature via drop downs and search menu etc.
+/**For the sermons, all of them will be stored locally. The new/latest sermons should be put into Dropbox and then the script
+ * should generate them and add them to the local sermons' json file. This will make it easier for me to refer to only one
+ * json file rather than two (one for the latest and one for the local).
  **/
 
 //node modules
 const jsonfs = require('jsonfile'),
       fs = require('fs'),
-    //fsPromises = require('fs').promises,
       dateFormat = require('dateformat'),
       _ = require('underscore'),
       Promise = require('promise'),
@@ -25,18 +22,12 @@ var local_sermons_json = __dirname + "/../data/local-sermons.json";
 let sermons_path = __dirname + "/../assets/audio/";
 let counter = 0;
 
-function dateSort(a, b){
-    let dateA = new Date(a.date).getTime();
-    let dateB = new Date(b.date).getTime();
-    return dateA > dateB ? 1: -1;
-}
-
 //Getting latest sermons on dropbox.
 dbx.filesListFolder({path: '/audio/'}).then(response => {
     let entries = response.entries;
     //console.log(entries[0]);
     entries.forEach(entry => counter++);
-    console.log(counter); //for consistency - ensuring that all the files are dealt with.
+    //console.log(counter); //for consistency - ensuring that all the files are dealt with.
 
     entries.forEach(entry => {
         let parts = entry.name.split("_");
@@ -52,7 +43,7 @@ dbx.filesListFolder({path: '/audio/'}).then(response => {
             'speaker': parts[2],
             'date_rev': date,
             'date': dateFormat(new Date(date), 'dd/mm/yyyy'),
-            'date_pretty': dateFormat(new Date(date), 'ddd dS mmm yyyy'),
+            'date_pretty': dateFormat(new Date(date), 'dS mmm yyyy'),
             'scripture': scripture,
             'category': category,
             'path': null,
@@ -60,7 +51,7 @@ dbx.filesListFolder({path: '/audio/'}).then(response => {
         };
         sermons.push(obj);
     });
-    console.log(sermons.length);
+    //console.log(sermons.length);
 
     //create a shared link for each of the files
     let links = entries.map(entry => dbx.sharingCreateSharedLink({path: entry.path_display}));
@@ -75,9 +66,11 @@ dbx.filesListFolder({path: '/audio/'}).then(response => {
             return sermon;
         })
     });
-    sermons = _.sortBy(sermons, sermon => - (new Date(sermon.date_rev).getTime()));
-    //sermons.sort(dateSort);
-    jsonfs.writeFileSync(sermons_json,sermons,{spaces:4});
+    console.log(jsonfs.readFileSync(sermons_json));
+    let test = jsonfs.readFileSync(local_sermons_json);
+    let all_sermons = sermons.concat(test);
+    all_sermons = _.sortBy(all_sermons, sermon => - (new Date(sermon.date_rev).getTime()));
+    jsonfs.writeFileSync(sermons_json, all_sermons,{spaces:4});
 }).catch(error => console.log(error));
 
 
@@ -101,11 +94,10 @@ fs.readdir(sermons_path, 'utf8', function(err, files){
         let obj = {
             'title': title.replace('#', '?'),
             'speaker': speaker,
-            'scripture': scripture,
             'date_rev': date,
             'date': dateFormat(new Date(date), 'dd/mm/yyyy'),
-            'date_pretty': dateFormat(new Date(date), "ddd dS mmm yyyy"),
-            'category': category,
+            'date_pretty': dateFormat(new Date(date), "dS mmm yyyy"),
+            'scripture': scripture,
             'path': "assets/audio/" + file
         };
 
