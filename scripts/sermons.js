@@ -45,7 +45,6 @@ dbx.filesListFolder({path: '/audio/'}).then(response => {
             'date': dateFormat(new Date(date), 'dd/mm/yyyy'),
             'date_pretty': dateFormat(new Date(date), 'dS mmm yyyy'),
             'scripture': scripture,
-            'category': category,
             'path': null,
             'raw_path': entry.path_display
         };
@@ -66,7 +65,6 @@ dbx.filesListFolder({path: '/audio/'}).then(response => {
             return sermon;
         })
     });
-    console.log(jsonfs.readFileSync(sermons_json));
     let test = jsonfs.readFileSync(local_sermons_json);
     let all_sermons = sermons.concat(test);
     all_sermons = _.sortBy(all_sermons, sermon => - (new Date(sermon.date_rev).getTime()));

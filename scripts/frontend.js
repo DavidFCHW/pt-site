@@ -21,7 +21,9 @@ $(document).ready(function(){
            sermons.forEach(sermon => {
                $(".list-group").append("<li class=\"list-group-item\">" +
                    "<h6>" + sermon.title + "<span style='display: inline-block; float: right'>" + sermon.date_pretty + "</span>" +"</h6>" + //put two elements on the same line
-
+                   "<audio style='width: 40rem;' class='sermon-list-player'" + "src= '" + sermon.path + "' controls></audio>"+ "<br>"+
+                   "<span style='margin-left: 30px; float:left;'>Speaker: " + sermon.speaker +"</span>"+
+                   "<span style='margin-right: 30px; float:right;'> Scripture: " + sermon.scripture + "</span>"+
                    "</li>");
            });
         });
@@ -41,6 +43,23 @@ $(document).ready(function(){
                     })
                 })
             }
-        })
+        });
+        /*$("input").keypress(function(){
+            event.preventDefault(); //to skip over the form's default "action" attribute.
+            $('.list-group-item').remove();
+            let searchVal = $(':text').val().toLowerCase();
+            if(searchVal != null){
+                $.getJSON('data/sermons.json', sermons => {
+                    sermons.forEach(sermon => {
+                        let sermon_pretty = sermon.title.toLowerCase().trim().includes(searchVal);
+                        if(sermon_pretty){
+                            $(".list-group").append("<li class=\"list-group-item\">" +
+                                "<h6>" + sermon.title + "<span style='display: inline-block; float: right'>" + sermon.date_pretty + "</span>" +"</h6>" + //put two elements on the same line
+                                "</li>");
+                        }
+                    })
+                })
+            }
+        });*/
     }
 });
