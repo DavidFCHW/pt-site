@@ -2,7 +2,6 @@ $(document).ready(function(){
     let title = $("head title").text();
     if(title === "Pilgrim Tabernacle"){
         $.getJSON("data/sermons.json", function (data) {
-            let obj = data[0];
             $("#f-sermon-title").text(data[0].title);
             $("#f-scripture").text(data[0].scripture);
             $("#f-speaker").text("By " + data[0].speaker);
@@ -20,10 +19,10 @@ $(document).ready(function(){
         $.getJSON("data/sermons.json", sermons => {
            sermons.forEach(sermon => {
                $(".list-group").append("<li class=\"list-group-item\">" +
-                   "<h6>" + sermon.title + "<span style='display: inline-block; float: right'>" + sermon.date_pretty + "</span>" +"</h6>" + //put two elements on the same line
-                   "<audio style='width: 40rem;' class='sermon-list-player'" + "src= '" + sermon.path + "' controls></audio>"+ "<br>"+
-                   "<span style='margin-left: 30px; float:left;'>Speaker: " + sermon.speaker +"</span>"+
-                   "<span style='margin-right: 30px; float:right;'> Scripture: " + sermon.scripture + "</span>"+
+                   "<h6>" + sermon.title + "<span>" + sermon.date_pretty + "</span>" +"</h6>" +
+                   "<audio class='sermon-list-player'" + "src= '" + sermon.path + "' controls></audio>"+ "<br>"+
+                   "<span class='speaker'>Speaker: " + sermon.speaker +"</span>"+
+                   "<span class='scripture'> Scripture: " + sermon.scripture + "</span>"+
                    "</li>");
            });
         });
