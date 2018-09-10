@@ -46,7 +46,8 @@ dbx.filesListFolder({path: '/audio/'}).then(response => {
             'date_pretty': dateFormat(new Date(date), 'dS mmm yyyy'),
             'scripture': scripture,
             'path': null,
-            'raw_path': entry.path_display
+            'raw_path': entry.path_display,
+            'pages': null
         };
         sermons.push(obj);
     });
@@ -68,6 +69,15 @@ dbx.filesListFolder({path: '/audio/'}).then(response => {
     let test = jsonfs.readFileSync(local_sermons_json);
     let all_sermons = sermons.concat(test);
     all_sermons = _.sortBy(all_sermons, sermon => - (new Date(sermon.date_rev).getTime()));
+    let page = 0;
+    for(let i = 0; i < all_sermons.length; i++){
+        if(i % 20 == 0){
+            page++;
+            all_sermons[i].pages = page;
+        } else{
+            all_sermons[i].pages = page;
+        }
+    }
     jsonfs.writeFileSync(sermons_json, all_sermons,{spaces:4});
 }).catch(error => console.log(error));
 
@@ -96,7 +106,7 @@ fs.readdir(sermons_path, 'utf8', function(err, files){
             'date': dateFormat(new Date(date), 'dd/mm/yyyy'),
             'date_pretty': dateFormat(new Date(date), "dS mmm yyyy"),
             'scripture': scripture,
-            'path': "assets/audio/" + file
+            'path': "assets/audio/" + file,
         };
 
         local_sermons.push(obj);

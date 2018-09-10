@@ -15,7 +15,6 @@ $(document).ready(function(){
             $("#s-player").attr("src", data[1].path);
         });
     } else if(title === "Sermons"){
-        console.log("This isn't the homepage");
         $.getJSON("data/sermons.json", sermons => {
            sermons.forEach(sermon => {
                $(".list-group").append("<li class=\"list-group-item\">" +
@@ -36,15 +35,20 @@ $(document).ready(function(){
                         let sermon_pretty = sermon.title.toLowerCase().trim().includes(searchVal);
                         if(sermon_pretty){
                             $(".list-group").append("<li class=\"list-group-item\">" +
-                                "<h6>" + sermon.title + "<span style='display: inline-block; float: right'>" + sermon.date_pretty + "</span>" +"</h6>" + //put two elements on the same line
+                                "<h6>" + sermon.title + "<span>" + sermon.date_pretty + "</span>" +"</h6>" +
+                                "<audio class='sermon-list-player'" + "src= '" + sermon.path + "' controls></audio>"+ "<br>"+
+                                "<span class='speaker'>Speaker: " + sermon.speaker +"</span>"+
+                                "<span class='scripture'> Scripture: " + sermon.scripture + "</span>"+
                                 "</li>");
                         }
                     })
                 })
             }
         });
-        /*$("input").keypress(function(){
-            event.preventDefault(); //to skip over the form's default "action" attribute.
+        /*$("#search-text").keypress(function(event){
+            if ( event.which == 13 ) {
+                event.preventDefault();
+            }
             $('.list-group-item').remove();
             let searchVal = $(':text').val().toLowerCase();
             if(searchVal != null){
@@ -60,5 +64,25 @@ $(document).ready(function(){
                 })
             }
         });*/
+        $.getJSON('data/sermons.json', data => {
+            for(let i = 1; i <= data[data.length - 1].pages; i++){
+                $('.page-buttons').append(" " + "<button type='button' id=" + i + ">" + i + "</button>");
+            }
+        });
+        $('.page-buttons').on('click', 'button', function(){
+            $('.list-group-item').remove();
+            let page = $(this).attr('id');
+            $.getJSON('data/sermons.json', data =>{
+                let page_data = data.filter(sermon => sermon.pages == page);
+                page_data.forEach(sermon => {
+                    $('.list-group').append("<li class=\"list-group-item\">" +
+                        "<h6>" + sermon.title + "<span>" + sermon.date_pretty + "</span>" +"</h6>" +
+                        "<audio class='sermon-list-player'" + "src= '" + sermon.path + "' controls></audio>"+ "<br>"+
+                        "<span class='speaker'>Speaker: " + sermon.speaker +"</span>"+
+                        "<span class='scripture'> Scripture: " + sermon.scripture + "</span>"+
+                        "</li>");
+                })
+            })
+        })
     }
 });

@@ -6864,6 +6864,18 @@ html {
       html body .homepage .card ul li .scripture {
         margin-right: 30px;
         float: right; }
+    html body .homepage .page-buttons {
+      margin: auto;
+      text-align: center;
+      padding: 20px; }
+      html body .homepage .page-buttons button {
+        color: black;
+        background-color: white;
+        border: 2px solid black;
+        transition-duration: 0.15s; }
+        html body .homepage .page-buttons button:hover {
+          background-color: black;
+          color: white; }
     html body .footer {
       position: absolute;
       bottom: 0;

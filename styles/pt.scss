@@ -134,6 +134,21 @@ html{
                     }
                 }
             }
+            .page-buttons{
+                margin:auto;
+                text-align: center;
+                padding: 20px;
+                button{
+                    color:black;
+                    background-color: white;
+                    border: 2px solid black;
+                    transition-duration: 0.15s;
+                    &:hover{
+                        background-color: black;
+                        color: white;
+                    }
+                }
+            }
         }
 
         .footer {
