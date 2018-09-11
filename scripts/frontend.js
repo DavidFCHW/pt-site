@@ -16,13 +16,37 @@ $(document).ready(function(){
         });
     } else if(title === "Sermons"){
         $.getJSON("data/sermons.json", sermons => {
+            let x = 0;
            sermons.forEach(sermon => {
-               $(".list-group").append("<li class=\"list-group-item\">" +
-                   "<h6>" + sermon.title + "<span>" + sermon.date_pretty + "</span>" +"</h6>" +
-                   "<audio class='sermon-list-player'" + "src= '" + sermon.path + "' controls></audio>"+ "<br>"+
-                   "<span class='speaker'>Speaker: " + sermon.speaker +"</span>"+
-                   "<span class='scripture'> Scripture: " + sermon.scripture + "</span>"+
-                   "</li>");
+               $(".accordion").append(
+                   "<div class='card'>" +
+                        "<div class='card-header' id='" + x + "'>" +
+                            "<h6 class='mb-0'>" +
+                                "<button class='btn btn-link' type='button' data-toggle='collapse' data-target='#collapse" + x +"' aria-expanded='true' aria-controls='collapse" + x +"'>" +
+                                    sermon.title +
+                                "</button>" +
+                            "</h6>" +
+                        "</div>"+
+                   "</div>" +
+                   "<div id='collapse"+ x +"' class='collapse' aria-labelledby='" + x + "' data-parent='#sermon-accordion' style='width:50rem; margin:auto; border:1px solid whitesmoke;'>" +
+                        "<div class='card-body'>" +
+                           "<audio class='sermon-list-player' preload='none'" + "src= '" + sermon.path + "' controls style='width:40rem; display:block; margin:auto; text-align: center;'></audio>"+ "<br>"+
+                           "<span class='speaker' style='margin-left: 30px; float:left;'>Speaker: " + sermon.speaker +"</span>"+
+                           "<span class='scripture' style='margin-right: 30px; float:right;'> Scripture: " + sermon.scripture + "</span>"+
+                        "</div>" +
+                   "</div>"
+
+                   /*"<li class='list-group-item' id="+ sermon.id +">" +
+                   "<header class='sermon-title mt-0' data-toggle='collapse' data-target='#"+ sermon.id +"-collapse' aria-expanded='true' aria-controls='" + sermon.id + "-collapse'>"+
+                        sermon.title + "<span>" + sermon.date_pretty + "</span>" +
+                   "</header>"+
+                   "<section class='collapse sermon-body' id='" + sermon.id + "-collapse'>" +
+                       "<audio class='sermon-list-player' preload='none'" + "src= '" + sermon.path + "' controls></audio>"+ "<br>"+
+                       "<span class='speaker'>Speaker: " + sermon.speaker +"</span>"+
+                       "<span class='scripture'> Scripture: " + sermon.scripture + "</span>"+
+                   "</section>"+
+                   "</li>"*/);
+               x++;
            });
         });
         $('#search').on('click','button', event => {
@@ -82,7 +106,8 @@ $(document).ready(function(){
                         "<span class='scripture'> Scripture: " + sermon.scripture + "</span>"+
                         "</li>");
                 })
-            })
+            });
+            //$(this).css({"background-color": "black", "color":"white"});
         })
     }
 });

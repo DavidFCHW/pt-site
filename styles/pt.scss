@@ -105,17 +105,43 @@ html{
             .search {
                 text-align: center;
             }
-            .card{
+            .accordion{
+                .card{
+                    margin-bottom: 15px;
+                    width: 50rem;
+                    margin:auto;
+
+                    .card-header{
+                    }
+                    .card-body {
+                        margin: auto;
+                        text-align: center;
+                        .sermon-list-player {
+                            width: 40rem;
+                            display: block;
+                            margin: auto;
+                            text-align: center;
+                        }
+                        .speaker {
+                            margin-left: 30px;
+                            float: left;
+                        }
+                        .scripture {
+                            margin-right: 30px;
+                            float: right;
+                        }
+                    }
+                }
+            }
+            /*.card{
                 margin-bottom: 15px;
                 width: 50rem;
                 margin:auto;
                 ul{
                     li{
-                        h6{
-                            span{
-                                display: inline-block;
-                                float: right;
-                            }
+                        span{
+                            display: inline-block;
+                            float: right;
                         }
                         audio{
                             width: 40rem;
@@ -133,7 +159,7 @@ html{
                         }
                     }
                 }
-            }
+            }*/
             .page-buttons{
                 margin:auto;
                 text-align: center;
@@ -146,6 +172,16 @@ html{
                     &:hover{
                         background-color: black;
                         color: white;
+                    }
+                    &:focus{
+                        background-color: black;
+                        color:white;
+                        outline:none;
+                    }
+                    &:active{
+                        background-color: black;
+                        color:white;
+                        outline:none;
                     }
                 }
             }

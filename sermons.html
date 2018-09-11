@@ -8,6 +8,7 @@
         <meta name="keywords" contents="Gospel, Jesus, Christ, Church, Evangelism, Pilgrim Tabernacle, Wood Green">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
         <script type="text/javascript" src="scripts/frontend.js"></script>
         <noscript>Your browser does not support JavaScript. Please use a browser like Chrome (recommended) or Mozilla Firefox.
             Or perhaps have JavaScript enabled on your browser.</noscript>
@@ -50,7 +51,7 @@
                 <div class="row">
                     <div class="search col-md-12 col-lg-12">
                         <form id="search">
-                            <input id="search-text" type="text" placeholder="Search..." size="100" autofocus>
+                            <input id="search-text" type="text" placeholder="Search..." size="100">
                             <button id="search-button"><i class="fa fa-search"></i></button>
                         </form>
                     </div>
@@ -63,10 +64,9 @@
                 </div>
                 <div class="row"> <!-- May put this into a new container !-->
                     <div class="sermon-list col-md-12 col-lg-12">
-                        <div class="card">
-                            <ul class="list-group list-group-flush">
-                                <!-- frontend.js does all the work. !-->
-                            </ul>
+                        <div class="accordion" id="sermon-accordion">
+                            <!--<div class="card"><ul class="list-group list-group-flush"></ul></div>!-->
+
                         </div>
                     </div>
                 </div>

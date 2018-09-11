@@ -6821,61 +6821,97 @@ html {
                 html body .def-header .container .links .menu li h6 a:hover {
                   color: black;
                   text-decoration: none; }
-    html body .homepage .main-img {
-      padding: 0px;
-      overflow-x: hidden; }
-    html body .homepage .container .home-about {
-      padding: 20px 15px; }
-    html body .homepage .container a {
-      background-color: white;
-      border: 2px solid black;
-      color: black;
-      padding: 10px;
-      transition: 0.3s; }
-      html body .homepage .container a:hover {
-        color: white;
-        text-decoration: none;
-        background-color: black; }
-    html body .homepage #find-us {
-      margin-left: 104.5px;
-      padding-left: 15px; }
-    html body .homepage .sermon-intro {
-      padding-top: 15px;
-      padding-bottom: 15px; }
-      html body .homepage .sermon-intro p {
-        text-align: center; }
-    html body .homepage .search {
-      text-align: center; }
-    html body .homepage .card {
-      margin-bottom: 15px;
-      width: 50rem;
-      margin: auto; }
-      html body .homepage .card ul li h6 span {
-        display: inline-block;
-        float: right; }
-      html body .homepage .card ul li audio {
-        width: 40rem;
-        display: block;
-        margin: auto;
-        text-align: center; }
-      html body .homepage .card ul li .speaker {
-        margin-left: 30px;
-        float: left; }
-      html body .homepage .card ul li .scripture {
-        margin-right: 30px;
-        float: right; }
-    html body .homepage .page-buttons {
-      margin: auto;
-      text-align: center;
-      padding: 20px; }
-      html body .homepage .page-buttons button {
-        color: black;
+    html body .homepage {
+      /*.card{
+          margin-bottom: 15px;
+          width: 50rem;
+          margin:auto;
+          ul{
+              li{
+                  span{
+                      display: inline-block;
+                      float: right;
+                  }
+                  audio{
+                      width: 40rem;
+                      display:block;
+                      margin:auto;
+                      text-align: center;
+                  }
+                  .speaker{
+                      margin-left: 30px;
+                      float: left;
+                  }
+                  .scripture{
+                      margin-right: 30px;
+                      float: right;
+                  }
+              }
+          }
+      }*/ }
+      html body .homepage .main-img {
+        padding: 0px;
+        overflow-x: hidden; }
+      html body .homepage .container .home-about {
+        padding: 20px 15px; }
+      html body .homepage .container a {
         background-color: white;
         border: 2px solid black;
-        transition-duration: 0.15s; }
-        html body .homepage .page-buttons button:hover {
-          background-color: black;
-          color: white; }
+        color: black;
+        padding: 10px;
+        transition: 0.3s; }
+        html body .homepage .container a:hover {
+          color: white;
+          text-decoration: none;
+          background-color: black; }
+      html body .homepage #find-us {
+        margin-left: 104.5px;
+        padding-left: 15px; }
+      html body .homepage .sermon-intro {
+        padding-top: 15px;
+        padding-bottom: 15px; }
+        html body .homepage .sermon-intro p {
+          text-align: center; }
+      html body .homepage .search {
+        text-align: center; }
+      html body .homepage .accordion .card {
+        margin-bottom: 15px;
+        width: 50rem;
+        margin: auto; }
+        html body .homepage .accordion .card .card-body {
+          margin: auto;
+          text-align: center; }
+          html body .homepage .accordion .card .card-body .sermon-list-player {
+            width: 40rem;
+            display: block;
+            margin: auto;
+            text-align: center; }
+          html body .homepage .accordion .card .card-body .speaker {
+            margin-left: 30px;
+            float: left; }
+          html body .homepage .accordion .card .card-body .scripture {
+            margin-right: 30px;
+            float: right; }
+      html body .homepage .page-buttons {
+        margin: auto;
+        text-align: center;
+        padding: 20px; }
+        html body .homepage .page-buttons button {
+          color: black;
+          background-color: white;
+          border: 2px solid black;
+          transition-duration: 0.15s; }
+          html body .homepage .page-buttons button:hover {
+            background-color: black;
+            color: white; }
+          html body .homepage .page-buttons button:focus {
+            background-color: black;
+            color: white;
+            outline: none; }
+          html body .homepage .page-buttons button:active {
+            background-color: black;
+            color: white;
+            outline: none; }
     html body .footer {
       position: absolute;
       bottom: 0;

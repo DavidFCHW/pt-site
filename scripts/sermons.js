@@ -1,6 +1,6 @@
 /*node*/
 /**For the sermons, all of them will be stored locally. The new/latest sermons should be put into Dropbox and then the script
- * should generate them and add them to the local sermons' json file. This will make it easier for me to refer to only one
+ * should generate them and add them to the local sermons' json file. This will make it easier for to refer to only one
  * json file rather than two (one for the latest and one for the local).
  **/
 
@@ -47,6 +47,7 @@ dbx.filesListFolder({path: '/audio/'}).then(response => {
             'scripture': scripture,
             'path': null,
             'raw_path': entry.path_display,
+            'id':entry.name.split(" ").join("-").replace("'", ""),
             'pages': null
         };
         sermons.push(obj);
@@ -107,6 +108,7 @@ fs.readdir(sermons_path, 'utf8', function(err, files){
             'date_pretty': dateFormat(new Date(date), "dS mmm yyyy"),
             'scripture': scripture,
             'path': "assets/audio/" + file,
+            'id': file.split(" ").join("-").replace("'","")
         };
 
         local_sermons.push(obj);
