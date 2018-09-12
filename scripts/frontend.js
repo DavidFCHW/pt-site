@@ -31,7 +31,7 @@ $(document).ready(function(){
                     "</div>"+
                     "<div id='collapse"+ x +"' class='collapse' aria-labelledby='" + x + "' data-parent='#sermon-accordion'>" +
                         "<div class='card-body'>" +
-                            "<audio class='sermon-list-player' preload='none'" + "src= '" + sermon.path + "' controls></audio>"+ "<br>"+
+                            "<audio class='sermon-list-player' preload='none'" + "src= '" + escape(sermon.path) + "' controls></audio>"+ "<br>"+
                             "<span class='speaker'>Speaker: " + sermon.speaker +"</span>"+
                             "<span class='scripture'> Scripture: " + sermon.scripture + "</span>"+
                         "</div>" +
