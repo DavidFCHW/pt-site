@@ -6874,10 +6874,22 @@ html {
           text-align: center; }
       html body .homepage .search {
         text-align: center; }
+        html body .homepage .search #search-button {
+          border: 1px solid gray;
+          color: gray;
+          background-color: white; }
+          html body .homepage .search #search-button:hover {
+            color: white;
+            background-color: gray; }
       html body .homepage .accordion .card {
         margin-bottom: 15px;
         width: 50rem;
         margin: auto; }
+        html body .homepage .accordion .card .card-header h6 button b {
+          font-weight: 500; }
+        html body .homepage .accordion .card .card-header h6 span {
+          float: right;
+          padding: 8px 12px; }
         html body .homepage .accordion .card .card-body {
           margin: auto;
           text-align: center; }
@@ -6895,23 +6907,27 @@ html {
       html body .homepage .page-buttons {
         margin: auto;
         text-align: center;
-        padding: 20px; }
-        html body .homepage .page-buttons button {
-          color: black;
-          background-color: white;
-          border: 2px solid black;
-          transition-duration: 0.15s; }
-          html body .homepage .page-buttons button:hover {
-            background-color: black;
-            color: white; }
-          html body .homepage .page-buttons button:focus {
-            background-color: black;
-            color: white;
-            outline: none; }
-          html body .homepage .page-buttons button:active {
-            background-color: black;
-            color: white;
-            outline: none; }
+        padding: 20px;
+        /*button{
+            color:black;
+            background-color: white;
+            border: 2px solid black;
+            transition-duration: 0.15s;
+            &:hover{
+                background-color: black;
+                color: white;
+            }
+            &:focus{
+                background-color: black;
+                color:white;
+                outline:none;
+            }
+            &:active{
+                background-color: black;
+                color:white;
+                outline:none;
+            }
+        }*/ }
     html body .footer {
       position: absolute;
       bottom: 0;

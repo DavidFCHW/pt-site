@@ -1,5 +1,8 @@
 $(document).ready(function(){
     let title = $("head title").text();
+    if(title != "Pilgrim Tabernacle"){
+        $(".jumbotron .container").prepend("<h1 class='display-1'>"+title+"</h1>");
+    }
     if(title === "Pilgrim Tabernacle"){
         $.getJSON("data/sermons.json", function (data) {
             $("#f-sermon-title").text(data[0].title);
@@ -15,55 +18,46 @@ $(document).ready(function(){
             $("#s-player").attr("src", data[1].path);
         });
     } else if(title === "Sermons"){
+        function setAccordion(sermon, x){
+            $(".accordion").append(
+                "<div class='card'>" +
+                    "<div class='card-header bg-light' id='" + x + "'>" +
+                        "<h6 class='mb-0'>" +
+                            "<button class='btn btn-outline-light text-dark btn-link' type='button' data-toggle='collapse' data-target='#collapse" + x +"' aria-expanded='true' aria-controls='collapse" + x +"'>" +
+                                "<b>"+sermon.title+"</b>" +
+                            "</button>" +
+                            "<span>"+sermon.date_pretty+"</span>"+
+                        "</h6>" +
+                    "</div>"+
+                    "<div id='collapse"+ x +"' class='collapse' aria-labelledby='" + x + "' data-parent='#sermon-accordion'>" +
+                        "<div class='card-body'>" +
+                            "<audio class='sermon-list-player' preload='none'" + "src= '" + sermon.path + "' controls></audio>"+ "<br>"+
+                            "<span class='speaker'>Speaker: " + sermon.speaker +"</span>"+
+                            "<span class='scripture'> Scripture: " + sermon.scripture + "</span>"+
+                        "</div>" +
+                    "</div>"+
+                "</div>"
+            );
+        }
         $.getJSON("data/sermons.json", sermons => {
             let x = 0;
            sermons.forEach(sermon => {
-               $(".accordion").append(
-                   "<div class='card'>" +
-                        "<div class='card-header' id='" + x + "'>" +
-                            "<h6 class='mb-0'>" +
-                                "<button class='btn btn-link' type='button' data-toggle='collapse' data-target='#collapse" + x +"' aria-expanded='true' aria-controls='collapse" + x +"'>" +
-                                    sermon.title +
-                                "</button>" +
-                            "</h6>" +
-                        "</div>"+
-                   "</div>" +
-                   "<div id='collapse"+ x +"' class='collapse' aria-labelledby='" + x + "' data-parent='#sermon-accordion' style='width:50rem; margin:auto; border:1px solid whitesmoke;'>" +
-                        "<div class='card-body'>" +
-                           "<audio class='sermon-list-player' preload='none'" + "src= '" + sermon.path + "' controls style='width:40rem; display:block; margin:auto; text-align: center;'></audio>"+ "<br>"+
-                           "<span class='speaker' style='margin-left: 30px; float:left;'>Speaker: " + sermon.speaker +"</span>"+
-                           "<span class='scripture' style='margin-right: 30px; float:right;'> Scripture: " + sermon.scripture + "</span>"+
-                        "</div>" +
-                   "</div>"
-
-                   /*"<li class='list-group-item' id="+ sermon.id +">" +
-                   "<header class='sermon-title mt-0' data-toggle='collapse' data-target='#"+ sermon.id +"-collapse' aria-expanded='true' aria-controls='" + sermon.id + "-collapse'>"+
-                        sermon.title + "<span>" + sermon.date_pretty + "</span>" +
-                   "</header>"+
-                   "<section class='collapse sermon-body' id='" + sermon.id + "-collapse'>" +
-                       "<audio class='sermon-list-player' preload='none'" + "src= '" + sermon.path + "' controls></audio>"+ "<br>"+
-                       "<span class='speaker'>Speaker: " + sermon.speaker +"</span>"+
-                       "<span class='scripture'> Scripture: " + sermon.scripture + "</span>"+
-                   "</section>"+
-                   "</li>"*/);
+               setAccordion(sermon, x);
                x++;
            });
         });
         $('#search').on('click','button', event => {
             event.preventDefault(); //to skip over the form's default "action" attribute.
-            $('.list-group-item').remove();
+            $('.card').remove();
             let searchVal = $(':text').val().toLowerCase();
             if(searchVal != null){
                 $.getJSON('data/sermons.json', sermons => {
+                    let x=0;
                     sermons.forEach(sermon => {
                         let sermon_pretty = sermon.title.toLowerCase().trim().includes(searchVal);
                         if(sermon_pretty){
-                            $(".list-group").append("<li class=\"list-group-item\">" +
-                                "<h6>" + sermon.title + "<span>" + sermon.date_pretty + "</span>" +"</h6>" +
-                                "<audio class='sermon-list-player'" + "src= '" + sermon.path + "' controls></audio>"+ "<br>"+
-                                "<span class='speaker'>Speaker: " + sermon.speaker +"</span>"+
-                                "<span class='scripture'> Scripture: " + sermon.scripture + "</span>"+
-                                "</li>");
+                            setAccordion(sermon, x);
+                            x++;
                         }
                     })
                 })
@@ -77,12 +71,12 @@ $(document).ready(function(){
             let searchVal = $(':text').val().toLowerCase();
             if(searchVal != null){
                 $.getJSON('data/sermons.json', sermons => {
+                    let x = 0;
                     sermons.forEach(sermon => {
                         let sermon_pretty = sermon.title.toLowerCase().trim().includes(searchVal);
                         if(sermon_pretty){
-                            $(".list-group").append("<li class=\"list-group-item\">" +
-                                "<h6>" + sermon.title + "<span style='display: inline-block; float: right'>" + sermon.date_pretty + "</span>" +"</h6>" + //put two elements on the same line
-                                "</li>");
+                            setAccordion(sermon, x);
+                            x++;
                         }
                     })
                 })
@@ -90,24 +84,20 @@ $(document).ready(function(){
         });*/
         $.getJSON('data/sermons.json', data => {
             for(let i = 1; i <= data[data.length - 1].pages; i++){
-                $('.page-buttons').append(" " + "<button type='button' id=" + i + ">" + i + "</button>");
+                $('.page-buttons').append(" " + "<button class='btn btn-outline-secondary' type='button' id=" + i + ">" + i + "</button>");
             }
         });
         $('.page-buttons').on('click', 'button', function(){
-            $('.list-group-item').remove();
+            $('.card').remove();
             let page = $(this).attr('id');
             $.getJSON('data/sermons.json', data =>{
                 let page_data = data.filter(sermon => sermon.pages == page);
+                let x = 0;
                 page_data.forEach(sermon => {
-                    $('.list-group').append("<li class=\"list-group-item\">" +
-                        "<h6>" + sermon.title + "<span>" + sermon.date_pretty + "</span>" +"</h6>" +
-                        "<audio class='sermon-list-player'" + "src= '" + sermon.path + "' controls></audio>"+ "<br>"+
-                        "<span class='speaker'>Speaker: " + sermon.speaker +"</span>"+
-                        "<span class='scripture'> Scripture: " + sermon.scripture + "</span>"+
-                        "</li>");
+                    setAccordion(sermon, x);
+                    x++;
                 })
             });
-            //$(this).css({"background-color": "black", "color":"white"});
         })
     }
 });

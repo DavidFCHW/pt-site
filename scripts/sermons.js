@@ -47,7 +47,6 @@ dbx.filesListFolder({path: '/audio/'}).then(response => {
             'scripture': scripture,
             'path': null,
             'raw_path': entry.path_display,
-            'id':entry.name.split(" ").join("-").replace("'", ""),
             'pages': null
         };
         sermons.push(obj);
@@ -108,7 +107,6 @@ fs.readdir(sermons_path, 'utf8', function(err, files){
             'date_pretty': dateFormat(new Date(date), "dS mmm yyyy"),
             'scripture': scripture,
             'path': "assets/audio/" + file,
-            'id': file.split(" ").join("-").replace("'","")
         };
 
         local_sermons.push(obj);

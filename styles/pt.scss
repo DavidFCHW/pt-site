@@ -104,6 +104,15 @@ html{
             }
             .search {
                 text-align: center;
+                #search-button{
+                    border: 1px solid gray;
+                    color: gray;
+                    background-color: white;
+                    &:hover{
+                        color: white;
+                        background-color: gray;
+                    }
+                }
             }
             .accordion{
                 .card{
@@ -111,7 +120,18 @@ html{
                     width: 50rem;
                     margin:auto;
 
-                    .card-header{
+                    .card-header {
+                        h6 {
+                            button {
+                                b{
+                                    font-weight: 500;
+                                }
+                            }
+                            span {
+                                float: right;
+                                padding: 8px 12px;
+                            }
+                        }
                     }
                     .card-body {
                         margin: auto;
@@ -164,7 +184,7 @@ html{
                 margin:auto;
                 text-align: center;
                 padding: 20px;
-                button{
+                /*button{
                     color:black;
                     background-color: white;
                     border: 2px solid black;
@@ -183,7 +203,7 @@ html{
                         color:white;
                         outline:none;
                     }
-                }
+                }*/
             }
         }
 
