@@ -31,7 +31,7 @@ $(document).ready(function(){
                     "</div>"+
                     "<div id='collapse"+ x +"' class='collapse' aria-labelledby='" + x + "' data-parent='#sermon-accordion'>" +
                         "<div class='card-body'>" +
-                            "<audio class='sermon-list-player' preload='none'" + "src= '" + escape(sermon.path) + "' controls></audio>"+ "<br>"+
+                            "<audio class='sermon-list-player'" + "src= '" + escape(sermon.path) + "' controls></audio>"+ "<br>"+
                             "<span class='speaker'>Speaker: " + sermon.speaker +"</span>"+
                             "<span class='scripture'> Scripture: " + sermon.scripture + "</span>"+
                         "</div>" +
@@ -39,11 +39,37 @@ $(document).ready(function(){
                 "</div>"
             );
         }
+        function setAccordion2(sermon, x){
+            $(".accordion").append(
+                "<div class='card'>" +
+                "<div class='card-header bg-light' id='" + x + "'>" +
+                "<h6 class='mb-0'>" +
+                "<button class='btn btn-outline-light text-dark btn-link' type='button' data-toggle='collapse' data-target='#collapse" + x +"' aria-expanded='true' aria-controls='collapse" + x +"'>" +
+                "<b>"+sermon.title+"</b>" +
+                "</button>" +
+                "<span>"+sermon.date_pretty+"</span>"+
+                "</h6>" +
+                "</div>"+
+                "<div id='collapse"+ x +"' class='collapse' aria-labelledby='" + x + "' data-parent='#sermon-accordion'>" +
+                "<div class='card-body'>" +
+                "<audio class='sermon-list-player'" + "src= '" + sermon.path + "' controls></audio>"+ "<br>"+
+                "<span class='speaker'>Speaker: " + sermon.speaker +"</span>"+
+                "<span class='scripture'> Scripture: " + sermon.scripture + "</span>"+
+                "</div>" +
+                "</div>"+
+                "</div>"
+            );
+        }
         $.getJSON("data/sermons.json", sermons => {
             let x = 0;
            sermons.forEach(sermon => {
-               setAccordion(sermon, x);
-               x++;
+               if(!sermon.path.includes('dropbox')){
+                   setAccordion(sermon, x);
+                   x++;
+               } else{
+                   setAccordion2(sermon, x);
+                   x++;
+               }
            });
         });
         $('#search').on('click','button', event => {
@@ -56,8 +82,13 @@ $(document).ready(function(){
                     sermons.forEach(sermon => {
                         let sermon_pretty = sermon.title.toLowerCase().trim().includes(searchVal);
                         if(sermon_pretty){
-                            setAccordion(sermon, x);
-                            x++;
+                            if(!sermon.path.includes('dropbox')){
+                                setAccordion(sermon, x);
+                                x++;
+                            } else{
+                                setAccordion2(sermon, x);
+                                x++;
+                            }
                         }
                     })
                 })
@@ -94,8 +125,13 @@ $(document).ready(function(){
                 let page_data = data.filter(sermon => sermon.pages == page);
                 let x = 0;
                 page_data.forEach(sermon => {
-                    setAccordion(sermon, x);
-                    x++;
+                    if(!sermon.path.includes('dropbox')){
+                        setAccordion(sermon, x);
+                        x++;
+                    } else{
+                        setAccordion2(sermon, x);
+                        x++;
+                    }
                 })
             });
         })
