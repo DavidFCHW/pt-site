@@ -6797,9 +6797,7 @@ html {
         html body .def-header .container .logo {
           padding-left: 15px; }
           html body .def-header .container .logo .site-title {
-            color: black;
-            font-family: "Times New Roman";
-            font-weight: bold; }
+            color: black; }
             html body .def-header .container .logo .site-title:hover {
               text-decoration: none;
               color: black; }
@@ -6854,19 +6852,24 @@ html {
         overflow-x: hidden; }
       html body .homepage .container .home-about {
         padding: 20px 15px; }
-      html body .homepage .container a {
+      html body .homepage .container #more-sermons {
         background-color: white;
         border: 2px solid black;
         color: black;
         padding: 10px;
         transition: 0.3s; }
-        html body .homepage .container a:hover {
+        html body .homepage .container #more-sermons:hover {
           color: white;
           text-decoration: none;
           background-color: black; }
       html body .homepage #find-us {
         margin-left: 104.5px;
         padding-left: 15px; }
+      html body .homepage #find-us-link {
+        color: gray;
+        text-decoration: underline; }
+        html body .homepage #find-us-link:hover {
+          color: lightgray; }
       html body .homepage .sermon-intro {
         padding-top: 15px;
         padding-bottom: 15px; }
@@ -6875,12 +6878,12 @@ html {
       html body .homepage .search {
         text-align: center; }
         html body .homepage .search #search-button {
-          border: 1px solid gray;
-          color: gray;
+          border: 1px solid darkgray;
+          color: darkgray;
           background-color: white; }
           html body .homepage .search #search-button:hover {
             color: white;
-            background-color: gray; }
+            background-color: darkgray; }
       html body .homepage .accordion .card {
         margin-bottom: 15px;
         width: 50rem;
@@ -6928,6 +6931,9 @@ html {
                 outline:none;
             }
         }*/ }
+    html body .nav-pills > a.active {
+      background-color: #a9a9a9 !important;
+      color: white !important; }
     html body .footer {
       position: absolute;
       bottom: 0;

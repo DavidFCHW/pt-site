@@ -42,21 +42,21 @@ $(document).ready(function(){
         function setAccordion2(sermon, x){
             $(".accordion").append(
                 "<div class='card'>" +
-                "<div class='card-header bg-light' id='" + x + "'>" +
-                "<h6 class='mb-0'>" +
-                "<button class='btn btn-outline-light text-dark btn-link' type='button' data-toggle='collapse' data-target='#collapse" + x +"' aria-expanded='true' aria-controls='collapse" + x +"'>" +
-                "<b>"+sermon.title+"</b>" +
-                "</button>" +
-                "<span>"+sermon.date_pretty+"</span>"+
-                "</h6>" +
-                "</div>"+
-                "<div id='collapse"+ x +"' class='collapse' aria-labelledby='" + x + "' data-parent='#sermon-accordion'>" +
-                "<div class='card-body'>" +
-                "<audio class='sermon-list-player'" + "src= '" + sermon.path + "' controls></audio>"+ "<br>"+
-                "<span class='speaker'>Speaker: " + sermon.speaker +"</span>"+
-                "<span class='scripture'> Scripture: " + sermon.scripture + "</span>"+
-                "</div>" +
-                "</div>"+
+                    "<div class='card-header bg-light' id='" + x + "'>" +
+                        "<h6 class='mb-0'>" +
+                            "<button class='btn btn-outline-light text-dark btn-link' type='button' data-toggle='collapse' data-target='#collapse" + x +"' aria-expanded='true' aria-controls='collapse" + x +"'>" +
+                                "<b>"+sermon.title+"</b>" +
+                            "</button>" +
+                            "<span>"+sermon.date_pretty+"</span>"+
+                        "</h6>" +
+                    "</div>"+
+                    "<div id='collapse"+ x +"' class='collapse' aria-labelledby='" + x + "' data-parent='#sermon-accordion'>" +
+                        "<div class='card-body'>" +
+                            "<audio class='sermon-list-player'" + "src= '" + sermon.path + "' controls></audio>"+ "<br>"+
+                            "<span class='speaker'>Speaker: " + sermon.speaker +"</span>"+
+                            "<span class='scripture'> Scripture: " + sermon.scripture + "</span>"+
+                        "</div>" +
+                    "</div>"+
                 "</div>"
             );
         }
@@ -94,28 +94,9 @@ $(document).ready(function(){
                 })
             }
         });
-        /*$("#search-text").keypress(function(event){
-            if ( event.which == 13 ) {
-                event.preventDefault();
-            }
-            $('.list-group-item').remove();
-            let searchVal = $(':text').val().toLowerCase();
-            if(searchVal != null){
-                $.getJSON('data/sermons.json', sermons => {
-                    let x = 0;
-                    sermons.forEach(sermon => {
-                        let sermon_pretty = sermon.title.toLowerCase().trim().includes(searchVal);
-                        if(sermon_pretty){
-                            setAccordion(sermon, x);
-                            x++;
-                        }
-                    })
-                })
-            }
-        });*/
         $.getJSON('data/sermons.json', data => {
             for(let i = 1; i <= data[data.length - 1].pages; i++){
-                $('.page-buttons').append(" " + "<button class='btn btn-outline-secondary' type='button' id=" + i + ">" + i + "</button>");
+                $('.page-buttons').append(" " + "<button class='btn btn-outline-dark' type='button' id=" + i + ">" + i + "</button>");
             }
         });
         $('.page-buttons').on('click', 'button', function(){
@@ -135,5 +116,7 @@ $(document).ready(function(){
                 })
             });
         })
+    } else if(title === "About Us"){
+
     }
 });

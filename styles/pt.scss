@@ -17,8 +17,8 @@ html{
                     padding-left: 15px;
                     .site-title {
                         color: black;
-                        font-family: "Times New Roman";
-                        font-weight: bold;
+                        //font-family: "Times New Roman";
+                        //font-weight: bold;
                         &:hover {
                             text-decoration: none;
                             color: black;
@@ -76,7 +76,7 @@ html{
 
                     }
                 }
-                a {
+                #more-sermons {
                     background-color: white;
                     border: 2px solid black;
                     color: black;
@@ -94,6 +94,13 @@ html{
                 margin-left: 104.5px;
                 padding-left: 15px;
             }
+            #find-us-link{
+                color: gray;
+                text-decoration: underline;
+                &:hover{
+                    color: lightgray;
+                }
+            }
 
             .sermon-intro {
                 padding-top: 15px;
@@ -105,12 +112,12 @@ html{
             .search {
                 text-align: center;
                 #search-button{
-                    border: 1px solid gray;
-                    color: gray;
+                    border: 1px solid darkgray;
+                    color: darkgray;
                     background-color: white;
                     &:hover{
                         color: white;
-                        background-color: gray;
+                        background-color: darkgray;
                     }
                 }
             }
@@ -206,7 +213,10 @@ html{
                 }*/
             }
         }
-
+        .nav-pills > a.active {
+            background-color: #a9a9a9 !important;
+            color: white !important;
+        }
         .footer {
             position: absolute;
             bottom: 0;
