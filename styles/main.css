@@ -6847,9 +6847,18 @@ html {
               }
           }
       }*/ }
-      html body .homepage .main-img {
-        padding: 0px;
-        overflow-x: hidden; }
+      html body .homepage #main-img {
+        /*padding: 0px;
+        overflow-x: hidden;*/
+        background-image: url("../assets/images/IMAG0100.jpg");
+        background-size: cover;
+        min-height: 575px;
+        filter: grayscale(60%);
+        /*below is the parallax effect.
+        background-attachment: fixed;
+        background-position: center;*/ }
+        html body .homepage #main-img .container {
+          padding-top: 80px; }
       html body .homepage .container .home-about {
         padding: 20px 15px; }
       html body .homepage .container #more-sermons {

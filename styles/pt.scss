@@ -56,9 +56,19 @@ html{
         }
 
         .homepage {
-            .main-img {
-                padding: 0px;
-                overflow-x: hidden;
+            #main-img{
+                /*padding: 0px;
+                overflow-x: hidden;*/
+                background-image: url("../assets/images/IMAG0100.jpg");
+                background-size: cover;
+                min-height: 575px;
+                filter: grayscale(60%);
+                /*below is the parallax effect.
+                background-attachment: fixed;
+                background-position: center;*/
+                .container{
+                    padding-top:80px;
+                }
             }
             .container {
                 .home-about {
