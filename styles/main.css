@@ -6946,7 +6946,8 @@ html {
       background-color: #6c757d !important;
       color: white !important; }
     html body #cc-link {
-      color: #6c757d; }
+      color: #6c757d;
+      text-decoration: underline; }
     html body .footer {
       position: absolute;
       bottom: 0;
