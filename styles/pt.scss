@@ -76,7 +76,7 @@ html{
 
                 }
                 .services {
-
+                    padding-bottom: 45px;
                 }
                 .latest-sermon {
                     .player {
@@ -105,7 +105,7 @@ html{
                 padding-left: 15px;
             }
             #find-us-link{
-                color: gray;
+                color: #6c757d;
                 text-decoration: underline;
                 &:hover{
                     color: lightgray;
@@ -224,8 +224,12 @@ html{
             }
         }
         .nav-pills > a.active {
-            background-color: #a9a9a9 !important;
+            background-color: #6c757d !important;
             color: white !important;
+        }
+        #cc-link{
+            color: #6c757d;
+            text-decoration: underline;
         }
         .footer {
             position: absolute;

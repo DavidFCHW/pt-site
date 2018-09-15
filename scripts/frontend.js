@@ -1,8 +1,9 @@
 $(document).ready(function(){
     let title = $("head title").text();
-    if(title != "Pilgrim Tabernacle"){
+    /*if(title != "Pilgrim Tabernacle"){
         $(".jumbotron .container").prepend("<h1 class='display-1'>"+title+"</h1>");
-    }
+    }*/
+    $(".jumbotron .container").prepend("<h1 class='display-1'>"+title+"</h1>");
     if(title === "Pilgrim Tabernacle"){
         $.getJSON("data/sermons.json", function (data) {
             $("#f-sermon-title").text(data[0].title);

@@ -6861,6 +6861,8 @@ html {
           padding-top: 80px; }
       html body .homepage .container .home-about {
         padding: 20px 15px; }
+      html body .homepage .container .services {
+        padding-bottom: 45px; }
       html body .homepage .container #more-sermons {
         background-color: white;
         border: 2px solid black;
@@ -6875,7 +6877,7 @@ html {
         margin-left: 104.5px;
         padding-left: 15px; }
       html body .homepage #find-us-link {
-        color: gray;
+        color: #6c757d;
         text-decoration: underline; }
         html body .homepage #find-us-link:hover {
           color: lightgray; }
@@ -6941,8 +6943,10 @@ html {
             }
         }*/ }
     html body .nav-pills > a.active {
-      background-color: #a9a9a9 !important;
+      background-color: #6c757d !important;
       color: white !important; }
+    html body #cc-link {
+      color: #6c757d; }
     html body .footer {
       position: absolute;
       bottom: 0;
