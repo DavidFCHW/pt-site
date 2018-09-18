@@ -6854,9 +6854,8 @@ html {
         background-size: cover;
         min-height: 575px;
         filter: grayscale(60%);
-        /*below is the parallax effect.
         background-attachment: fixed;
-        background-position: center;*/ }
+        background-position: center; }
         html body .homepage #main-img .container {
           padding-top: 80px; }
       html body .homepage .container .home-about {
