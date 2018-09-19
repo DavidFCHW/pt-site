@@ -26,6 +26,29 @@ html{
                     }
                 }
                 .links {
+                    #home-menu{
+                        padding-left: 0px;
+                        margin-bottom: 8px;
+                        margin-top: 6px;
+                        li{
+                            display:inline;
+                            h6{
+                                padding: 25px;
+                                padding-bottom: 13px;
+                                display: inline;
+                                &:hover {
+                                    border-bottom: 2px solid #6c757d;
+                                }
+                                a {
+                                    color: black;
+                                    &:hover {
+                                        color: black;
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
                     .menu {
                         padding-left: 0px;
                         float: right;
@@ -39,7 +62,7 @@ html{
                                 padding-bottom: 13px;
                                 display: inline;
                                 &:hover {
-                                    border-bottom: 2px solid black;
+                                    border-bottom: 2px solid #6c757d;
                                 }
                                 a {
                                     color: black;
@@ -61,7 +84,7 @@ html{
                 overflow-x: hidden;*/
                 background-image: url("../assets/images/IMAG0100.jpg");
                 background-size: cover;
-                min-height: 575px;
+                min-height: 585px; //previously preferred 575px
                 filter: grayscale(60%);
                 //below is the parallax effect.
                 background-attachment: fixed;

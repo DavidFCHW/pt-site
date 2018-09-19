@@ -6801,6 +6801,23 @@ html {
             html body .def-header .container .logo .site-title:hover {
               text-decoration: none;
               color: black; }
+        html body .def-header .container .links #home-menu {
+          padding-left: 0px;
+          margin-bottom: 8px;
+          margin-top: 6px; }
+          html body .def-header .container .links #home-menu li {
+            display: inline; }
+            html body .def-header .container .links #home-menu li h6 {
+              padding: 25px;
+              padding-bottom: 13px;
+              display: inline; }
+              html body .def-header .container .links #home-menu li h6:hover {
+                border-bottom: 2px solid #6c757d; }
+              html body .def-header .container .links #home-menu li h6 a {
+                color: black; }
+                html body .def-header .container .links #home-menu li h6 a:hover {
+                  color: black;
+                  text-decoration: none; }
         html body .def-header .container .links .menu {
           padding-left: 0px;
           float: right;
@@ -6813,7 +6830,7 @@ html {
               padding-bottom: 13px;
               display: inline; }
               html body .def-header .container .links .menu li h6:hover {
-                border-bottom: 2px solid black; }
+                border-bottom: 2px solid #6c757d; }
               html body .def-header .container .links .menu li h6 a {
                 color: black; }
                 html body .def-header .container .links .menu li h6 a:hover {
@@ -6852,7 +6869,7 @@ html {
         overflow-x: hidden;*/
         background-image: url("../assets/images/IMAG0100.jpg");
         background-size: cover;
-        min-height: 575px;
+        min-height: 585px;
         filter: grayscale(60%);
         background-attachment: fixed;
         background-position: center; }
