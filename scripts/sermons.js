@@ -6,12 +6,12 @@
 
 //node modules
 const jsonfs = require('jsonfile'),
-      fs = require('fs'),
-      dateFormat = require('dateformat'),
-      _ = require('underscore'),
-      Promise = require('promise'),
-      Dropbox = require('dropbox').Dropbox,
-      dbx = new Dropbox({accessToken: 'hTBrKPn7IyAAAAAAAAAAP1yewW6YtI8VE6KRmrq6ZqAsZJ3cxQkD_2dDbtNj3MkM'});
+    fs = require('fs'),
+    dateFormat = require('dateformat'),
+    _ = require('underscore'),
+    Promise = require('promise'),
+    Dropbox = require('dropbox').Dropbox,
+    dbx = new Dropbox({accessToken: 'hTBrKPn7IyAAAAAAAAAAP1yewW6YtI8VE6KRmrq6ZqAsZJ3cxQkD_2dDbtNj3MkM'});
 
 
 //Main variables
