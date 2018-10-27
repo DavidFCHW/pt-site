@@ -10,20 +10,18 @@
         <script src="node_modules/jquery/dist/jquery.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
         <script type="text/javascript" src="scripts/frontend.js"></script>
-        <script>
-        </script>
         <noscript>Your browser does not support JavaScript. Please use a browser like Chrome (recommended) or Mozilla Firefox.
             Or perhaps have JavaScript enabled on your browser.</noscript>
     </head>
     <body>
-        <header class="def-header">
+        <!--<header class="def-header">
             <div class="container">
                 <div class="row">
                     <!--<div class="logo col-md-6 col-lg-4 col-sm-12 col-xs-12">
                         <!--<a class="site-title" href="index.html"><h2>PILGRIM TABERNACLE</h2></a>
-                    </div>-->
-                    <div class="links col-md-12 col-lg-12 col-sm-12 col-xs-12" style="margin:auto; text-align:center;">
-                        <!-- possibly make the links buttons instead of anchor tag !-->
+                    </div>
+                    <div class="links col-md-12 col-lg-12 col-xl-12 col-sm-12 col-xs-12" style="margin:auto; text-align:center;">
+                        <!-- possibly make the links buttons instead of anchor tag
                         <ul id="home-menu">
                             <li><h6><a href="index.html">Home</a></h6></li> &nbsp;
                             <li><h6><a href="about.html">About Us</a></h6></li> &nbsp;
@@ -34,7 +32,22 @@
                     </div>
                 </div>
             </div>
-        </header>
+        </header>-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <!-- This should be for the finished logo. -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#new-nav" aria-controls="#new-nav" aria-expanded="false" aria-label="toggle-navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="new-nav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html" style="padding: 20px;">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html" style="padding: 20px;">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sermons.html" style="padding: 20px;">Sermons</a></li>
+                    <li class="nav-item"><a class="nav-link" href="location.html" style="padding: 20px;">Location</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html" style="padding: 20px;">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
         <main class="homepage">
             <!--<div class="container-fluid main-img">
                 <div class="row">
@@ -46,7 +59,7 @@
             </div>-->
             <div class="jumbotron jumbotron-fluid text-white text-center" id="main-img">
                 <div class="container">
-                    <!--<h1 class="display-1">Pilgrim Tabernacle</h1>-->
+                    <!--<h1 class="display-1">Pilgrim Tabernacle</h1> in frontend.js-->
                     <p class="Lead"><i>"Wherefore Jesus also, that he might sanctify the people with His own blood, suffered without the gate.
                         Let us go forth therefore unto Him without the camp, bearing His reproach.
                         For here have we no continuing city, but we seek one to come." - Hebrews 13:12-14</i></p>
@@ -54,7 +67,7 @@
             </div>
             <div class="container">
                 <div class="row border-bottom">
-                    <div class="home-about col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <div class="home-about col-md-12 col-lg-12 col-xl-12 col-sm-12 col-xs-12">
                         <h3>Welcome!</h3>
                         <p>Welcome to Pilgrim Tabernacle! We are sojourners in this world seeking the heavenly kingdom to come in Jesus Christ. As a body of believers, we exist to glorify God through the gospel and hope that the resources on this site will help you believe in the Lord Jesus Christ and to continue believing in Him for eternal life.</p>
                     </div>
@@ -63,7 +76,7 @@
                 <h3>Our Services</h3>
                 <p>Please join and fellowship with us at the following meetings:</p>
                 <div class="row services border-bottom">
-                    <div class="col-md-4 col-lg-4">
+                    <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="card-header bg-secondary text-white">
                                 <h4>Sunday Services</h4>
@@ -76,7 +89,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-lg-4">
+                    <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="card-header bg-secondary text-white">
                                 <h4>Bible Studies</h4>
@@ -90,7 +103,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-lg-4">
+                    <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="card-header bg-secondary text-white">
                                 <h4>Prayer Meetings</h4>
@@ -115,7 +128,7 @@
                     </div>
                 </div>
                 <div class="row latest-sermon">
-                    <div class="first-sermon col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                    <div class="first-sermon col-md-6 col-lg-6 col col-sm-12 col-xs-12 text-truncate">
                         <h5 id="f-sermon-title"></h5>
                         <!--<h6 id="f-scripture"></h6> !-->
                         <h6 id="f-speaker"></h6>
@@ -123,7 +136,7 @@
                         <h6 id="f-date"></h6>
                         <audio id="f-player" src="" controls style="width: 30rem;"></audio>
                     </div>
-                    <div class="second-sermon col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                    <div class="second-sermon col-md-6 col-lg-6 col-xl-6 col-sm-12 col-xs-12 text-truncate">
                         <h5 id="s-sermon-title"></h5>
                         <!--<h6 id="s-scripture"></h6> !-->
                         <h6 id="s-speaker"></h6>
@@ -134,7 +147,7 @@
                 </div>
                 <br>
                 <div class="row border-bottom" style="padding-bottom: 30px;">
-                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" style="text-align:center;">
+                    <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12 col-xs-12 text-center">
                         <!--<a href="sermons.html">More sermons</a>!-->
                         <!--<a href="sermons.html" id="more-sermons">More sermons</a>-->
                         <a href="sermons.html"><button type="button" class="btn btn-outline-secondary">More sermons</button></a>
