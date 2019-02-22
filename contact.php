@@ -52,7 +52,7 @@
                     Message(required):<br><textarea></textarea><br><br>
                 </form>
             </div>-->
-            <div class="container">
+            <!--<div class="container">
                 <form method="post" action="<?php echo htmlspecialchars("scripts/email.php"); ?>" >
                     <div class="form-row">
                         <div class="form-group col-md-4">
@@ -85,7 +85,7 @@
             <div class="container">
                 <p>Alternatively, you can also contact our minister John Sherwood via his mobile on 07814507432.<br></p>
                    <p style="padding-bottom:10px;"><small>*Upon sending your message, you should receive an email informing you that we have received your email. This email should NOT be replied to. Thank you and God bless.</small></p>
-            </div>
+            </div>-->
         </main>
         <footer class="footer bg-light">
             <div class="container">

@@ -6,53 +6,63 @@
  * Time: 13:11
  */
 
-
-$name = "";
-$email = "";
-$mobile = "";
-
-$nameErr = "";
-$emailErr = "";
-$mobileErr = "";
-$messageErr = "";
-
-//for the email.
-//TODO: what kind of enquiries.
-
-$to = "contactus@pilgrimtabernacle.co.uk";
-$subject = "Enquiries";
-$message = $_POST['message'];
-$headers = 'From: ' . $to . '\r\n' . 'Reply-To: ' . $_POST['email'];
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\PHPMailer;
 
 
-//Removing any possible XSS characters.
+require '../PHPMailer-master/src/Exception.php';
+require '../PHPMailer-master/src/PHPMailer.php';
+require '../PHPMailer-master/src/SMTP.php';
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    if(!empty($_POST['name'])){
-        $name = charFilter($_POST['name']);
-    }
+//require_once("../PHPMailer-master/src/PHPMailer.php");
 
-    if(!empty($_POST['email'])){
-        $email = charFilter($_POST['email']);
-    }
+$mail = new PHPMailer(true);
 
-    if(!empty($_POST['mobile'])){
-        $mobile = charFilter($_POST['mobile']);
-    }
+/*$mail->isSMTP();
+$mail->SMTPAuth = true;
+$mail->SMTPSecure ='tls';
+$mail->Host = 'smtp.webmail.co.uk';
+$mail->Port = '25';
+$mail->isHTML();
+$mail->Username = 'contactus@pilgrimtabernacle.co.uk';
+$mail->Password = '';
+try {
+    $mail->SetFrom($_POST['email']);
+} catch (Exception $e) {
+}
+$mail->Subject = 'Enquiries';
+$mail->Body = $_POST['message'];
+$mail->addAddress('contactus@pilgrimtabernacle.co.uk');
 
-    if(!empty($_POST['message'])){
-        $message = charFilter($_POST['message']);
-    }
+try {
+    $mail->send();
+} catch (Exception $e) {
+}*/
 
-    ini_set('SMTP', '213.171.216.40');
-    mail($to, $subject, $message, "From: contactus@pilgrimtabernacle.co.uk");
+try{
+    //Server settings
+    $mail->SMTPDebug = 2;
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'dugz97@gmail.com';
+    $mail->Password = '';
+    $mail->SMTPSecure = 'ssl';
+    $mail->Port = '465';
 
+    //Recipients
+    $mail->setFrom($_POST['email'], $_POST['name']);
+    $mail->addAddress('contactus@pilgrimtabernacle.co.uk', 'Pilgrim Tabernacle');
+
+    //Content
+    $mail->isHTML(false);
+    $mail->Subject = 'Enquiries';
+    $mail->Body = $_POST['message'];
+
+    $mail->send();
+    echo 'message has been sent';
+} catch(\Exception $e){
+    echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
 }
 
-function charFilter($input){
-    $input = trim($input);
-    $input = stripslashes($input);
-    $input = htmlspecialchars($input);
-    return $input;
-}
-
+?>
