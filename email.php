@@ -9,10 +9,9 @@
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
 
-
-require '../PHPMailer-master/src/Exception.php';
-require '../PHPMailer-master/src/PHPMailer.php';
-require '../PHPMailer-master/src/SMTP.php';
+require 'PHPMailer-master/src/Exception.php';
+require 'PHPMailer-master/src/PHPMailer.php';
+require 'PHPMailer-master/src/SMTP.php';
 
 //require_once("../PHPMailer-master/src/PHPMailer.php");
 
@@ -43,15 +42,15 @@ try{
     //Server settings
     $mail->SMTPDebug = 2;
     $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
-    $mail->SMTPAuth = true;
-    $mail->Username = 'dugz97@gmail.com';
+//    $mail->Host = 'smtp.livemail.co.uk';
+    $mail->SMTPAuth = false;
+    $mail->Username = 'contactus@pilgrimtabernacle.co.uk';
     $mail->Password = '';
-    $mail->SMTPSecure = 'ssl';
-    $mail->Port = '465';
-
+//    $mail->SMTPSecure = 'ssl';
+//    $mail->Port = '25';
+    $mail->Host = 'ssl://smtp.livemail.co.uk:465';
     //Recipients
-    $mail->setFrom($_POST['email'], $_POST['name']);
+    $mail->setFrom('contactus@pilgrimtabernacle.co.uk', /*$_POST['name']*/ 'Pilgrim Tabernacle');
     $mail->addAddress('contactus@pilgrimtabernacle.co.uk', 'Pilgrim Tabernacle');
 
     //Content
@@ -65,4 +64,7 @@ try{
     echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
 }
 
+//$message = $_POST['message'];
+/*mail("contactus@pilgrimtabernacle.co.uk", "Test Subject", $_POST['message']);
+mail("contactus@pilgrimtabernacle.co.uk", "Test Subject", "This is a message", null, null);*/
 ?>

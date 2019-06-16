@@ -28,7 +28,7 @@
                             <li><h6><a href="about.html">About Us</a></h6></li> &nbsp;
                             <li><h6><a href="sermons.html">Sermons</a></h6></li> &nbsp;
                             <li><h6><a href="location.html">Location</a></h6></li> &nbsp;
-                            <li><h6><a href="contact.php">Contact</a></h6></li>
+                            <li><h6><a href="contact.html">Contact</a></h6></li>
                         </ul>
                     </div>
                 </div>
@@ -42,9 +42,13 @@
             </div>
             <div class="container">
                 <!--<p>At the moment you can contact our minister John Sherwood via his mobile on 07814507432. In the near future there will be other forms of contact. Thank you for your patience.</p>-->
-                <p>If you have any questions or enquiries about the bible or about the church, please feel free to contact us via the form below, and we will try our best to get back to you as soon as possible*.
-                Messages will be sent to our church email: contactus@pilgrimtabernacle.co.uk. You can also email us directly using this address.</p>
+                <p>If you have any questions or enquiries about the bible or about the church, please feel free to email us at contactus@pilgrimtabernacle.co.uk or contact our
+                minister John Sherwood via mobile on 07814507432.</p>
+                <!--<p>If you have any questions or enquiries about the bible or about the church, please feel free to contact us via the form below, and we will try our best to get back to you as soon as possible*.
+                Messages will be sent to our church email: contactus@pilgrimtabernacle.co.uk. You can also email us directly using this address.</p>-->
             </div>
+
+            <!--todo: uncomment the block below for the form-->
             <!--<div class="container">
                 <form>
                     Name (required):<br><input type="text"><br><br>
@@ -53,7 +57,8 @@
                 </form>
             </div>-->
             <!--<div class="container">
-                <form method="post" action="<?php echo htmlspecialchars("scripts/email.php"); ?>" >
+&lt;!&ndash;                <form method="post" action="&ndash;&gt;<?php //echo htmlspecialchars("scripts/email.php"); ?>&lt;!&ndash;" >&ndash;&gt;
+                <form method="post" action="email.php">
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="input-name">Name (required)</label>
@@ -70,18 +75,24 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-12">
+                            <label for="input-subject">Subject Required</label>
+                            <input type="text" class="form-control" id="input-subject" name="subject" placeholder="Subject" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
                             <label for="input-message">Message (required)</label>
                             <textarea class="form-control" id="input-message" name="message" placeholder="Put message in here..." required></textarea>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-12">
-                            <button type="submit" class="btn btn-outline-secondary">Submit</button>
+                            <button type="submit" class="btn btn-outline-secondary" name="submit">Submit</button>
                         </div>
                     </div>
                 </form>
-            </div>
-            <br>
+            </div>-->
+            <!--<br>
             <div class="container">
                 <p>Alternatively, you can also contact our minister John Sherwood via his mobile on 07814507432.<br></p>
                    <p style="padding-bottom:10px;"><small>*Upon sending your message, you should receive an email informing you that we have received your email. This email should NOT be replied to. Thank you and God bless.</small></p>
@@ -90,7 +101,7 @@
         <footer class="footer bg-light">
             <div class="container">
                 <!--<p>&copy; Pilgrim Tabernacle</p>-->
-                <p><b>Contact Us: 07814507432</b></p>
+                <p><b>Email: contactus@pilgrimtabernacle.co.uk</b></p>
             </div>
         </footer>
     </body>

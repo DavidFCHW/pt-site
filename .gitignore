@@ -4,3 +4,5 @@ assets/
 scripts/sermons.js
 google3883cad7eb288c40.html
 web.config
+.env
+testEmail.php

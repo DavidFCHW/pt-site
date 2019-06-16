@@ -1,12 +1,23 @@
 [
     {
+        "title": "Aspire to be Holy",
+        "speaker": "John Sherwood",
+        "date_rev": "2019/04/21",
+        "date": "21/04/2019",
+        "date_pretty": "21st Apr 2019",
+        "scripture": "Colossians 3:1-13",
+        "path": "https://www.dropbox.com/s/e9g2hs2esbmnxor/LDM_21.04.2019_John%20Sherwood_Colossians%203.1-13_Aspire%20to%20be%20Holy.mp3?raw=1",
+        "raw_path": "/audio/LDM_21.04.2019_John Sherwood_Colossians 3.1-13_Aspire to be Holy.mp3",
+        "pages": 1
+    },
+    {
         "title": "The Mutilation of the Ten Commandments by Civil Authority",
         "speaker": "John Sherwood",
         "date_rev": "2018/10/07",
         "date": "07/10/2018",
         "date_pretty": "7th Oct 2018",
         "scripture": "Deuteronomy 5:1-21",
-        "path": "https://www.dropbox.com/s/eqrzfidvl8vo7kd/_07.10.2018_John%20Sherwood_Deuteronomy%205.1-21_The%20Mutilation%20of%20the%20Ten%20Commandments%20by%20Civil%20Authority.mp3?raw=1",
+        "path": "https://www.dropbox.com/s/9ak2xxny8uygswt/_07.10.2018_John%20Sherwood_Deuteronomy%205.1-21_The%20Mutilation%20of%20the%20Ten%20Commandments%20by%20Civil%20Authority.mp3?raw=1",
         "raw_path": "/audio/_07.10.2018_John Sherwood_Deuteronomy 5.1-21_The Mutilation of the Ten Commandments by Civil Authority.mp3",
         "pages": 1
     },
@@ -17,7 +28,7 @@
         "date": "30/09/2018",
         "date_pretty": "30th Sep 2018",
         "scripture": "John 5:1-15",
-        "path": "https://www.dropbox.com/s/bqb565dzr0vt42p/_30.09.2018_John%20Sherwood_John%205.1-15_Healing%20of%20the%20Impotent%20Man.mp3?raw=1",
+        "path": "https://www.dropbox.com/s/vh4y9njl4n5atk6/_30.09.2018_John%20Sherwood_John%205.1-15_Healing%20of%20the%20Impotent%20Man.mp3?raw=1",
         "raw_path": "/audio/_30.09.2018_John Sherwood_John 5.1-15_Healing of the Impotent Man.mp3",
         "pages": 1
     },
@@ -28,7 +39,7 @@
         "date": "07/01/2018",
         "date_pretty": "7th Jan 2018",
         "scripture": "Exodus 4",
-        "path": "https://www.dropbox.com/s/nllfgbnnp2lbfel/LDM_07.01.2018_John%20Sherwood_Exodus%204_Trusting%20in%20God%27s%20Ability.mp3?raw=1",
+        "path": "https://www.dropbox.com/s/0c5f711u3gdv32i/LDM_07.01.2018_John%20Sherwood_Exodus%204_Trusting%20in%20God%27s%20Ability.mp3?raw=1",
         "raw_path": "/audio/LDM_07.01.2018_John Sherwood_Exodus 4_Trusting in God's Ability.mp3",
         "pages": 1
     },
@@ -200,7 +211,7 @@
         "date_pretty": "27th Feb 2011",
         "scripture": "Ruth 1",
         "path": "assets/audio/LDE_27.02.2011_Pee Kee_Ruth 1_The Choices With Consequences.mp3",
-        "pages": 1
+        "pages": 2
     },
     {
         "title": "Responding to God's Will",
@@ -400,7 +411,7 @@
         "date_pretty": "12th Dec 2010",
         "scripture": "Matthew 8:29",
         "path": "assets/audio/LDM_12.12.2010_John Sherwood_Matthew 8.29_We Have To Do With Jesus.mp3",
-        "pages": 2
+        "pages": 3
     },
     {
         "title": "Receiving Those Who Belong to Christ",
@@ -600,7 +611,7 @@
         "date_pretty": "25th Jul 2010",
         "scripture": "Matthew 5:1-12",
         "path": "assets/audio/LDE_25.07.2010_John Sherwood_Matthew 5.1-12_Blessings to Believers.mp3",
-        "pages": 3
+        "pages": 4
     },
     {
         "title": "Do You Believe on the Son of God?",
@@ -800,7 +811,7 @@
         "date_pretty": "9th May 2010",
         "scripture": "2 Samuel 11",
         "path": "assets/audio/LDM_09.05.2010_John Sherwood_2 Samuel 11_Character of Self and of Christ.mp3",
-        "pages": 4
+        "pages": 5
     },
     {
         "title": "Where Is Our Faith?",
@@ -1000,7 +1011,7 @@
         "date_pretty": "17th Jan 2010",
         "scripture": "1 Kings 3",
         "path": "assets/audio/LDM_17.01.2010_John Sherwood_1 Kings 3_Glory of Christ' Kingdom.mp3",
-        "pages": 5
+        "pages": 6
     },
     {
         "title": "What it Means to Be a Christian",
@@ -1200,7 +1211,7 @@
         "date_pretty": "16th Aug 2009",
         "scripture": "Hebrews 2:14",
         "path": "assets/audio/LDM_16.08.2009_John Sherwood_Hebrews 2.14_Humiliation of Christ.mp3",
-        "pages": 6
+        "pages": 7
     },
     {
         "title": "Love for God's House",
@@ -1400,7 +1411,7 @@
         "date_pretty": "24th May 2009",
         "scripture": "Acts 2",
         "path": "assets/audio/LDE_24.05.2009_John Sherwood_Acts 2_The Character of the Early Church.mp3",
-        "pages": 7
+        "pages": 8
     },
     {
         "title": "The Person of Christ",
@@ -1600,7 +1611,7 @@
         "date_pretty": "1st Mar 2009",
         "scripture": "Psalm 119:17-24",
         "path": "assets/audio/LDE_01.03.2009_John Sherwood_Psalm 119.17-24_Greater Depth of Understanding God's Word.mp3",
-        "pages": 8
+        "pages": 9
     },
     {
         "title": "Abiding in Him",
@@ -1800,7 +1811,7 @@
         "date_pretty": "14th Dec 2008",
         "scripture": "Acts 4-5",
         "path": "assets/audio/LDE_14.12.2008_John Sherwood_Acts 4-5_The Church of God (Part 8).mp3",
-        "pages": 9
+        "pages": 10
     },
     {
         "title": "The Church of God (Part 7)",
@@ -2000,7 +2011,7 @@
         "date_pretty": "5th Oct 2008",
         "scripture": "John 10:11-30",
         "path": "assets/audio/LDM_05.10.2008_John Sherwood_John 10.11-30_I and Father Are One.mp3",
-        "pages": 10
+        "pages": 11
     },
     {
         "title": "I and the Father Are One",
